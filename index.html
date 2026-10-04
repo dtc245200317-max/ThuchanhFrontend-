@@ -3,88 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành: Tạo Bố Cục Trang Web Cơ Bản</title>
+    <title>Bài tập: Tạo Layout với các thẻ HTML5 và CSS</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Phân vùng chính bao bọc toàn bộ trang web (#main) -->
-    <div id="main">
+    <!-- Khung chứa toàn bộ trang web -->
+    <div id="main-container">
 
-        <!-- 1. Head: Logo & Banner -->
-        <div id="head">
-            <div class="logo">
-                <h1>CODEGYM</h1>
-                <p>Hệ thống đào tạo Lập trình viên Chuyên nghiệp</p>
-            </div>
-        </div>
+        <!-- 1. HEADER: Phân vùng đầu trang (Banner, Logo) -->
+        <header>
+            <h1>CODEGYM HTML5 LAYOUT</h1>
+            <p>Sử dụng thẻ Semantic HTML5 để xây dựng cấu trúc trang web hiện đại</p>
+        </header>
 
-        <!-- 2. Head-link: Thanh điều hướng liên kết đầu trang -->
-        <div id="head-link">
+        <!-- 2. NAV: Thanh điều hướng menu chính -->
+        <nav>
             <ul>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Học viên</a></li>
+                <li><a href="#">Giới thiệu</a></li>
                 <li><a href="#">Khóa học</a></li>
-                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Tin tức</a></li>
                 <li><a href="#">Liên hệ</a></li>
             </ul>
+        </nav>
+
+        <!-- Khung chứa 3 cột nội dung -->
+        <div class="content-wrapper">
+
+            <!-- 3. ASIDE (Trái): Cột bên trái chứa danh mục -->
+            <aside class="sidebar-left">
+                <h3>Danh mục bài viết</h3>
+                <ul>
+                    <li><a href="#">Lập trình HTML5/CSS3</a></li>
+                    <li><a href="#">JavaScript Căn bản</a></li>
+                    <li><a href="#">ReactJS cho Người mới</a></li>
+                    <li><a href="#">Kinh nghiệm IT 2026</a></li>
+                </ul>
+            </aside>
+
+            <!-- 4. SECTION: Phân vùng nội dung chính ở giữa -->
+            <section class="main-content">
+                <h2>Tin tức nổi bật</h2>
+
+                <!-- ARTICLE 1: Bài viết độc lập số 1 -->
+                <article>
+                    <h3>1. Sự ra đời của các thẻ Semantic HTML5</h3>
+                    <p>Các thẻ như header, nav, section, article, aside và footer giúp cấu trúc trang web trở nên rõ ràng, tối ưu hóa cho công cụ tìm kiếm (SEO) và dễ bảo trì hơn so với việc lạm dụng quá nhiều thẻ div.</p>
+                </article>
+
+                <!-- ARTICLE 2: Bài viết độc lập số 2 -->
+                <article>
+                    <h3>2. Tầm quan trọng của Bố cục CSS</h3>
+                    <p>Kết hợp các thẻ HTML5 Semantic với CSS giúp bạn xây dựng giao diện chuyên nghiệp, tương thích tốt trên nhiều thiết bị và kích thước màn hình khác nhau.</p>
+                </article>
+            </section>
+
+            <!-- 5. ASIDE (Phải): Cột bên phải chứa thông tin phụ -->
+            <aside class="sidebar-right">
+                <h3>Thông tin phụ</h3>
+                <div class="widget">
+                    <h4>Lịch sự kiện</h4>
+                    <p>📅 Demo Day Frontend - Khóa 2026</p>
+                </div>
+                <div class="widget">
+                    <h4>Thống kê</h4>
+                    <p>👁️ 1,250 Lượt xem trang</p>
+                </div>
+            </aside>
+
         </div>
 
-        <!-- 3. Left: Phân vùng nội dung bên trái -->
-        <div id="left">
-            <h3>Danh mục trái</h3>
-            <ul>
-                <li><a href="#">Tin mới nhất</a></li>
-                <li><a href="#">Sự kiện nổi bật</a></li>
-                <li><a href="#">Góc học tập</a></li>
-                <li><a href="#">Tài liệu lập trình</a></li>
-            </ul>
-        </div>
-
-        <!-- 4. Content: Phân vùng nội dung chính ở giữa -->
-        <div id="content">
-            <h2>Tin tức mới nhất (Hot News)</h2>
-            <div class="news-item">
-                <h3>Khai giảng khóa học Lập trình Web Frontend</h3>
-                <p>Chương trình đào tạo thực chiến giúp học viên làm chủ HTML, CSS, JavaScript và các Framework hiện đại trong thời gian ngắn nhất.</p>
-            </div>
-            
-            <div class="photo-slide">
-                <h3>Thư viện ảnh hoạt động (Photo Slide)</h3>
-                <div class="slide-placeholder">Khung hiển thị Slide ảnh học viên</div>
-            </div>
-
-            <div class="news-item">
-                <h3>Hội thảo Định hướng Nghề nghiệp IT 2026</h3>
-                <p>Cơ hội gặp gỡ các chuyên gia hàng đầu và doanh nghiệp công nghệ để tìm hiểu về nhu cầu tuyển dụng ngành phần mềm.</p>
-            </div>
-        </div>
-
-        <!-- 5. Right: Phân vùng thông tin bên phải -->
-        <div id="right">
-            <h3>Thông tin bên phải</h3>
-            <div class="widget">
-                <h4>Lịch sự kiện</h4>
-                <p>📅 Ngày 15/10: Demo Day</p>
-            </div>
-            <div class="widget">
-                <h4>Biểu đồ tăng trưởng</h4>
-                <div class="chart-placeholder">Biểu đồ thống kê</div>
-            </div>
-            <div class="widget">
-                <h4>Bản đồ địa điểm</h4>
-                <div class="map-placeholder">Bản đồ Google Maps</div>
-            </div>
-        </div>
-
-        <!-- 6. Footer: Phân vùng chân trang -->
-        <div id="footer">
-            <p>&copy; 2026 Bản quyền thuộc về CodeGym Việt Nam. Tất cả quyền được bảo lưu.</p>
+        <!-- 6. FOOTER: Phân vùng chân trang -->
+        <footer>
+            <p>&copy; 2026 CodeGym Việt Nam - Tất cả các quyền được bảo lưu.</p>
             <p>Địa chỉ: Hà Nội - Đà Nẵng - TP. Hồ Chí Minh | Hotline: 1800 6325</p>
-        </div>
+        </footer>
 
     </div>
 
 </body>
-</html>
+</html>s
