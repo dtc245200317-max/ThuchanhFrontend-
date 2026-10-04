@@ -1,42 +1,214 @@
-/* Reset định dạng cơ bản và áp dụng box-sizing cho toàn bộ phần tử */
+/* Reset CSS cơ bản cho toàn bộ trang */
 * {
-    box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng khối */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #e9ecef;
+    color: #333333;
+    line-height: 1.5;
 }
 
-/* Khung chứa toàn bộ bố cục */
-.container {
-    width: 100%;
+/* 1. Bộ chọn #main: Cố định độ rộng và căn giữa toàn bộ trang web */
+#main {
+    width: 960px;
+    margin: 20px auto;
     background-color: #ffffff;
+    border: 1px solid #cccccc;
     padding: 10px;
-    border: 1px solid #dddddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* Cột bên trái: Chiếm 60% chiều rộng, đẩy sang trái */
-.left-column {
-    width: 60%;
-    float: left;
-    background-color: lightblue;
+/* 2. Bộ chọn #head: Vùng logo và banner đầu trang */
+#head {
+    height: 100px;
+    background-color: #1b365d;
+    color: #ffffff;
     padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 4px;
 }
 
-/* Cột bên phải: Chiếm 38% chiều rộng, đẩy sang phải */
-.right-column {
-    width: 38%;
-    float: right;
-    background-color: lightgreen;
-    padding: 20px;
+#head .logo h1 {
+    font-size: 28px;
+    color: #f39c12;
 }
 
-/* Xử lý lỗi tràn/xẹp khung chứa (Clearfix) */
-.container::after {
-    content: "";
+#head .logo p {
+    font-size: 13px;
+    color: #dddddd;
+}
+
+/* 3. Bộ chọn #head-link: Thanh menu liên kết đầu trang */
+#head-link {
+    height: 40px;
+    background-color: #2c3e50;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+#head-link ul {
+    list-style: none;
+    display: flex;
+}
+
+#head-link ul li a {
     display: block;
-    clear: both;
-}s
+    line-height: 40px;
+    padding: 0 20px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#head-link ul li a:hover {
+    background-color: #e74c3c;
+}
+
+/* 4. Bộ chọn #left: Cột bên trái (rộng 200px, float sang trái) */
+#left {
+    width: 200px;
+    min-height: 450px;
+    float: left;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#left h3 {
+    font-size: 16px;
+    color: #1b365d;
+    border-bottom: 2px solid #1b365d;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+#left ul {
+    list-style: none;
+}
+
+#left ul li {
+    margin-bottom: 8px;
+}
+
+#left ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+#left ul li a:hover {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* 5. Bộ chọn #content: Khối nội dung chính ở giữa (rộng 518px, float sang trái) */
+#content {
+    width: 518px;
+    min-height: 450px;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+
+#content h2 {
+    font-size: 18px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.news-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.news-item h3 {
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.news-item p {
+    font-size: 13px;
+    color: #555555;
+}
+
+.photo-slide {
+    background-color: #eef2f5;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 4px;
+}
+
+.slide-placeholder {
+    height: 100px;
+    background-color: #bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+/* 6. Bộ chọn #right: Cột bên phải (rộng 200px, float sang trái) */
+#right {
+    width: 200px;
+    min-height: 450px;
+    float: left;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#right h3 {
+    font-size: 16px;
+    color: #1b365d;
+    border-bottom: 2px solid #1b365d;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.widget {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.widget h4 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.chart-placeholder, .map-placeholder {
+    height: 60px;
+    background-color: #d1d8e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: #4b6584;
+    border-radius: 4px;
+}
+
+/* 7. Bộ chọn #footer: Phân vùng chân trang (sử dụng clear: both) */
+#footer {
+    clear: both; /* Hủy hiệu ứng float của 3 cột phía trên */
+    background-color: #1b365d;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 10px;
+    font-size: 13px;
+    border-radius: 4px;
+}

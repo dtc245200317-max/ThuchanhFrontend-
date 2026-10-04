@@ -3,24 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành: Bố cục hai cột bằng Float và Clear</title>
+    <title>Thực hành: Tạo Bố Cục Trang Web Cơ Bản</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- Cột bên trái chứa nội dung chính -->
-        <div class="left-column">
-            <h2>Cột bên trái (Nội dung chính)</h2>
-            <p>Đây là cột chứa nội dung chính của trang web. Cột này chiếm 60% chiều rộng của khung chứa và được đẩy sang bên trái nhờ thuộc tính float: left.</p>
+    <!-- Phân vùng chính bao bọc toàn bộ trang web (#main) -->
+    <div id="main">
+
+        <!-- 1. Head: Logo & Banner -->
+        <div id="head">
+            <div class="logo">
+                <h1>CODEGYM</h1>
+                <p>Hệ thống đào tạo Lập trình viên Chuyên nghiệp</p>
+            </div>
         </div>
 
-        <!-- Cột bên phải chứa sidebar -->
-        <div class="right-column">
-            <h3>Cột bên phải (Sidebar)</h3>
-            <p>Đây là cột sidebar chiếm 38% chiều rộng và được đẩy sang bên phải nhờ thuộc tính float: right.</p>
+        <!-- 2. Head-link: Thanh điều hướng liên kết đầu trang -->
+        <div id="head-link">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Học viên</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Tuyển dụng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
         </div>
+
+        <!-- 3. Left: Phân vùng nội dung bên trái -->
+        <div id="left">
+            <h3>Danh mục trái</h3>
+            <ul>
+                <li><a href="#">Tin mới nhất</a></li>
+                <li><a href="#">Sự kiện nổi bật</a></li>
+                <li><a href="#">Góc học tập</a></li>
+                <li><a href="#">Tài liệu lập trình</a></li>
+            </ul>
+        </div>
+
+        <!-- 4. Content: Phân vùng nội dung chính ở giữa -->
+        <div id="content">
+            <h2>Tin tức mới nhất (Hot News)</h2>
+            <div class="news-item">
+                <h3>Khai giảng khóa học Lập trình Web Frontend</h3>
+                <p>Chương trình đào tạo thực chiến giúp học viên làm chủ HTML, CSS, JavaScript và các Framework hiện đại trong thời gian ngắn nhất.</p>
+            </div>
+            
+            <div class="photo-slide">
+                <h3>Thư viện ảnh hoạt động (Photo Slide)</h3>
+                <div class="slide-placeholder">Khung hiển thị Slide ảnh học viên</div>
+            </div>
+
+            <div class="news-item">
+                <h3>Hội thảo Định hướng Nghề nghiệp IT 2026</h3>
+                <p>Cơ hội gặp gỡ các chuyên gia hàng đầu và doanh nghiệp công nghệ để tìm hiểu về nhu cầu tuyển dụng ngành phần mềm.</p>
+            </div>
+        </div>
+
+        <!-- 5. Right: Phân vùng thông tin bên phải -->
+        <div id="right">
+            <h3>Thông tin bên phải</h3>
+            <div class="widget">
+                <h4>Lịch sự kiện</h4>
+                <p>📅 Ngày 15/10: Demo Day</p>
+            </div>
+            <div class="widget">
+                <h4>Biểu đồ tăng trưởng</h4>
+                <div class="chart-placeholder">Biểu đồ thống kê</div>
+            </div>
+            <div class="widget">
+                <h4>Bản đồ địa điểm</h4>
+                <div class="map-placeholder">Bản đồ Google Maps</div>
+            </div>
+        </div>
+
+        <!-- 6. Footer: Phân vùng chân trang -->
+        <div id="footer">
+            <p>&copy; 2026 Bản quyền thuộc về CodeGym Việt Nam. Tất cả quyền được bảo lưu.</p>
+            <p>Địa chỉ: Hà Nội - Đà Nẵng - TP. Hồ Chí Minh | Hotline: 1800 6325</p>
+        </div>
+
     </div>
 
 </body>
