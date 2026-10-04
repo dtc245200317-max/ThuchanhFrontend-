@@ -1,9 +1,9 @@
-/* Thiết lập chung cho trang */
+/* Thiết lập giao diện tổng thể trang */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f8f9fa;
+    background-color: #f4f6f9;
     color: #333333;
-    padding: 20px;
+    padding: 30px;
     line-height: 1.6;
 }
 
@@ -16,7 +16,7 @@ h1 {
 section {
     background-color: #ffffff;
     padding: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
@@ -28,67 +28,79 @@ h2 {
     margin-top: 0;
 }
 
-/* 2. Kiểu đánh dấu vuông (square) */
-.list-square {
-    list-style-type: square;
+/* --------------------------------------------------
+ * 1. ĐỊNH KIỂU BẢNG CHÍNH (.styled-table)
+ * -------------------------------------------------- */
+
+/* Chiều rộng 100% và gộp đường viền đơn */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse; /* Bỏ đường viền kép */
+    font-size: 15px;
 }
 
-/* 3. Kiểu số La Mã in hoa (upper-roman) */
-.list-roman {
-    list-style-type: upper-roman;
+/* Định kiểu đường viền và padding cho ô tiêu đề và ô dữ liệu */
+.styled-table th,
+.styled-table td {
+    border: 1px solid #dddddd; /* Đường viền xám nhạt */
+    padding: 12px 15px;       /* Khoảng cách thoáng bên trong ô */
+    text-align: left;         /* Căn trái nội dung */
 }
 
-/* 4. Sử dụng hình ảnh SVG làm biểu tượng đánh dấu */
-.list-image {
-    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="%230d6efd"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
+/* Định kiểu cho hàng tiêu đề (th) */
+.styled-table th {
+    background-color: #333333; /* Màu nền tối */
+    color: #ffffff;            /* Chữ màu trắng */
+    height: 45px;              /* Chiều cao hàng tiêu đề */
 }
 
-/* 5. So sánh vị trí dấu đánh dấu outside và inside */
-.pos-outside {
-    list-style-position: outside;
-    background-color: #e9ecef;
-    padding: 15px 15px 15px 40px;
+/* Đổi màu nền cho ô dữ liệu và tạo hiệu ứng hover khi rê chuột */
+.styled-table tbody tr {
+    background-color: #f9f9f9;
 }
 
-.pos-inside {
-    list-style-position: inside;
-    background-color: #e9ecef;
-    padding: 15px;
+.styled-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Màu sọc xen kẽ */
 }
 
-/* 6. Sử dụng thuộc tính rút gọn list-style (type position) */
-.list-shorthand {
-    list-style: square inside;
+.styled-table tbody tr:hover {
+    background-color: #e9ecef; /* Hiệu ứng đổi màu khi hover */
 }
 
-/* 7. Định dạng màu sắc, background và khoảng cách */
-.list-styled-color {
-    background-color: #e3f2fd;
-    padding: 20px 20px 20px 40px;
-    border-radius: 6px;
-    list-style-type: disc;
+
+/* --------------------------------------------------
+ * 2. ĐỊNH KIỂU BẢNG CĂN CHỈNH DỌC (.alignment-table)
+ * -------------------------------------------------- */
+
+.alignment-table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-.list-styled-color li {
-    color: #0d47a1;
-    margin-bottom: 10px;
-    font-weight: bold;
+.alignment-table th,
+.alignment-table td {
+    border: 1px solid #0d6efd;
+    padding: 10px;
 }
 
-/* 8. Bài tập tổng hợp: Lộ trình học lập trình Web */
-.roadmap-list {
-    background-color: #212529;
-    padding: 20px 20px 20px 35px;
-    border-radius: 8px;
-    list-style: square inside;
+.alignment-table th {
+    background-color: #0d6efd;
+    color: white;
 }
 
-.roadmap-list li {
-    color: #f8f9fa;
-    background-color: #343a40;
-    margin-bottom: 8px;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 16px;
-    border-left: 4px solid #0d6efd;
+.alignment-table td {
+    height: 70px; /* Thiết lập chiều cao để thấy rõ căn chỉnh vertical-align */
+}
+
+/* Các giá trị vertical-align khác nhau */
+.align-top {
+    vertical-align: top;
+}
+
+.align-middle {
+    vertical-align: middle;
+}
+
+.align-bottom {
+    vertical-align: bottom;
 }

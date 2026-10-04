@@ -3,94 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành: Danh sách trong CSS</title>
+    <title>Thực hành: Bảng trong CSS</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>THỰC HÀNH: DANH SÁCH TRONG CSS</h1>
+    <h1>THỰC HÀNH: ĐỊNH KIỂU BẢNG TRONG CSS</h1>
 
-    <!-- 2. Thay đổi kiểu đánh dấu danh sách không có thứ tự -->
+    <!-- 1 & 2. Bảng minh họa border-collapse, width, padding và màu sắc -->
     <section>
-        <h2>2. Danh sách không thứ tự (Square)</h2>
-        <ul class="list-square">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-        </ul>
+        <h2>Danh sách học viên (Đã áp dụng CSS Table styling)</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Họ tên</th>
+                    <th>Tuổi</th>
+                    <th>Lớp</th>
+                    <th>Trạng thái</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Nguyễn Văn A</td>
+                    <td>20</td>
+                    <td>Web Frontend</td>
+                    <td>Đang học</td>
+                </tr>
+                <tr>
+                    <td>Trần Thị B</td>
+                    <td>21</td>
+                    <td>Web Frontend</td>
+                    <td>Đang học</td>
+                </tr>
+                <tr>
+                    <td>Lê Văn C</td>
+                    <td>22</td>
+                    <td>Web Backend</td>
+                    <td>Đã tốt nghiệp</td>
+                </tr>
+                <tr>
+                    <td>Phạm Thị D</td>
+                    <td>19</td>
+                    <td>Web Frontend</td>
+                    <td>Đang học</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
-    <!-- 3. Thay đổi kiểu đánh dấu danh sách có thứ tự -->
+    <!-- 3. Bảng minh họa căn chỉnh vertical-align và height -->
     <section>
-        <h2>3. Danh sách có thứ tự (Số La Mã in hoa)</h2>
-        <ol class="list-roman">
-            <li>Học HTML</li>
-            <li>Học CSS</li>
-            <li>Học JavaScript</li>
-            <li>Học Git</li>
-        </ol>
-    </section>
-
-    <!-- 4. Sử dụng hình ảnh làm dấu đánh dấu -->
-    <section>
-        <h2>4. Danh sách dùng hình ảnh làm dấu đánh dấu</h2>
-        <ul class="list-image">
-            <li>Visual Studio Code</li>
-            <li>Google Chrome</li>
-            <li>GitHub</li>
-            <li>Git</li>
-        </ul>
-    </section>
-
-    <!-- 5. Thay đổi vị trí dấu đánh dấu -->
-    <section>
-        <h2>5. Vị trí dấu đánh dấu (Outside vs Inside)</h2>
-        <h3>Position: Outside (Mặc định)</h3>
-        <ul class="pos-outside">
-            <li>Mục thứ nhất với dấu đánh dấu nằm bên ngoài khung phần tử.</li>
-            <li>Mục thứ hai với dấu đánh dấu nằm bên ngoài khung phần tử.</li>
-        </ul>
-
-        <h3>Position: Inside</h3>
-        <ul class="pos-inside">
-            <li>Mục thứ nhất với dấu đánh dấu nằm bên trong khung phần tử.</li>
-            <li>Mục thứ hai với dấu đánh dấu nằm bên trong khung phần tử.</li>
-        </ul>
-    </section>
-
-    <!-- 6. Sử dụng thuộc tính rút gọn list-style -->
-    <section>
-        <h2>6. Thuộc tính rút gọn list-style</h2>
-        <ul class="list-shorthand">
-            <li>Thành phần 1</li>
-            <li>Thành phần 2</li>
-            <li>Thành phần 3</li>
-        </ul>
-    </section>
-
-    <!-- 7. Tạo kiểu danh sách với màu sắc và khoảng cách -->
-    <section>
-        <h2>7. Danh sách với màu sắc và khoảng cách</h2>
-        <ul class="list-styled-color">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-        </ul>
-    </section>
-
-    <!-- 8. Bài tập tổng hợp: Lộ trình học lập trình Web -->
-    <section>
-        <h2>8. Bài tập tổng hợp: Lộ trình học lập trình Web</h2>
-        <ul class="roadmap-list">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Git</li>
-            <li>GitHub</li>
-        </ul>
+        <h2>Lịch phân công nhiệm vụ (Minh họa Height & Vertical-align)</h2>
+        <table class="alignment-table">
+            <thead>
+                <tr>
+                    <th>Nhiệm vụ</th>
+                    <th>Người thực hiện</th>
+                    <th>Ghi chú</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="align-top">Thiết kế giao diện CSS</td>
+                    <td>Nguyễn Văn A</td>
+                    <td>Căn chỉnh phía trên (Top)</td>
+                </tr>
+                <tr>
+                    <td class="align-middle">Kiểm thử tính năng Form</td>
+                    <td>Trần Thị B</td>
+                    <td>Căn chỉnh giữa (Middle)</td>
+                </tr>
+                <tr>
+                    <td class="align-bottom">Đẩy code lên GitHub</td>
+                    <td>Lê Văn C</td>
+                    <td>Căn chỉnh phía dưới (Bottom)</td>
+                </tr>
+            </tbody>
+        </table>
     </section>
 
 </body>
