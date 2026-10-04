@@ -1,83 +1,94 @@
-/* Custom CSS for CodeGym Career Landing Page */
-
+/* Thiết lập chung cho trang */
 body {
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8f9fa;
+    color: #333333;
+    padding: 20px;
+    line-height: 1.6;
 }
 
-/* Navbar active state & backdrop */
-.navbar {
-    transition: all 0.3s ease-in-out;
+h1 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 30px;
 }
 
-/* Hero Section Mask adjustments */
-#hero {
-    min-height: 100vh;
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-#hero .mask {
-    min-height: 100vh;
+h2 {
+    color: #198754;
+    border-bottom: 2px solid #198754;
+    padding-bottom: 8px;
+    margin-top: 0;
 }
 
-/* Divider line style */
-.divider {
-    height: 4px;
-    width: 60px;
-    border-radius: 2px;
+/* 2. Kiểu đánh dấu vuông (square) */
+.list-square {
+    list-style-type: square;
 }
 
-/* Icon Box for About section */
-.icon-box {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* 3. Kiểu số La Mã in hoa (upper-roman) */
+.list-roman {
+    list-style-type: upper-roman;
 }
 
-/* Roadmap step card */
-.step-number {
-    width: 45px;
-    height: 45px;
-    font-size: 1.2rem;
+/* 4. Sử dụng hình ảnh SVG làm biểu tượng đánh dấu */
+.list-image {
+    list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="%230d6efd"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>');
 }
 
-/* Border utilities */
-.border-indigo {
-    border-color: #3f51b5 !important;
+/* 5. So sánh vị trí dấu đánh dấu outside và inside */
+.pos-outside {
+    list-style-position: outside;
+    background-color: #e9ecef;
+    padding: 15px 15px 15px 40px;
 }
 
-.border-warning {
-    border-color: #ffbb33 !important;
+.pos-inside {
+    list-style-position: inside;
+    background-color: #e9ecef;
+    padding: 15px;
 }
 
-/* Card hover animation */
-.hoverable {
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+/* 6. Sử dụng thuộc tính rút gọn list-style (type position) */
+.list-shorthand {
+    list-style: square inside;
 }
 
-.hoverable:hover {
-    transform: translateY(-5px);
+/* 7. Định dạng màu sắc, background và khoảng cách */
+.list-styled-color {
+    background-color: #e3f2fd;
+    padding: 20px 20px 20px 40px;
+    border-radius: 6px;
+    list-style-type: disc;
 }
 
-/* Responsive divider border on stats counter */
-@media (min-width: 768px) {
-    .border-right-md {
-        border-right: 1px solid #e0e0e0;
-    }
+.list-styled-color li {
+    color: #0d47a1;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-/* Testimonial avatar overlay */
-.testimonial-card .avatar {
-    width: 90px;
-    height: 90px;
-    margin-top: -45px;
-    overflow: hidden;
-    border: 3px solid #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+/* 8. Bài tập tổng hợp: Lộ trình học lập trình Web */
+.roadmap-list {
+    background-color: #212529;
+    padding: 20px 20px 20px 35px;
+    border-radius: 8px;
+    list-style: square inside;
 }
 
-.testimonial-card .card-up {
-    height: 100px;
-    overflow: hidden;
+.roadmap-list li {
+    color: #f8f9fa;
+    background-color: #343a40;
+    margin-bottom: 8px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    border-left: 4px solid #0d6efd;
 }
