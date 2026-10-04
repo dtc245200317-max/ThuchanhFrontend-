@@ -3,49 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web Cá Nhân</title>
-    <!-- Liên kết tệp CSS bên ngoài -->
+    <title>Nhúng CSS vào trang HTML</title>
+    
+    <!-- PHẦN 3: External Style - Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- PHẦN 2: Internal Style - Viết CSS bên trong thẻ <style> ở phần <head> -->
+    <style>
+        .internal-heading {
+            color: #198754; /* Màu xanh lá */
+        }
+        .internal-paragraph {
+            color: #0d6efd; /* Màu xanh dương */
+        }
+    </style>
 </head>
 <body>
 
-    <header>
-        <h1>Chào mừng đến với trang web cá nhân của tôi</h1>
-    </header>
+    <h1>BÀI TẬP: NHÚNG CSS VÀO TRANG HTML</h1>
 
-    <section class="profile">
-        <img src="avatar.jpg" alt="Ảnh đại diện" class="avatar">
-        <p>Xin chào! Tôi là <strong>Nguyễn Văn A</strong>, một lập trình viên yêu thích công nghệ.</p>
+    <!-- Phần 1: Inline Style -->
+    <section>
+        <h2>Phần 1: Nhúng CSS theo dạng Inline Style</h2>
+        <h3 style="color: #d63384;">Tiêu đề sử dụng Inline Style</h3>
+        <p style="color: #fd7e14;">Đoạn văn này được đổi màu bằng cách sử dụng thuộc tính style viết trực tiếp trong thẻ HTML.</p>
     </section>
 
-    <section class="hobbies">
-        <h2>Sở thích</h2>
-        <ul>
-            <li>Đọc sách</li>
-            <li>Chơi thể thao</li>
-            <li>Lập trình</li>
-            <li>Du lịch</li>
-        </ul>
+    <!-- Phần 2: Internal Style -->
+    <section>
+        <h2>Phần 2: Nhúng CSS theo dạng Internal Style</h2>
+        <h3 class="internal-heading">Tiêu đề sử dụng Internal Style</h3>
+        <p class="internal-paragraph">Đoạn văn này được đổi màu bằng thẻ &lt;style&gt; định nghĩa trong phần &lt;head&gt; của trang.</p>
     </section>
 
-    <section class="goals">
-        <h2>Mục tiêu học tập</h2>
-        <p>Tôi muốn trở thành một lập trình viên chuyên nghiệp, xây dựng các sản phẩm hữu ích.</p>
+    <!-- Phần 3: External Style -->
+    <section>
+        <h2>Phần 3: Nhúng CSS theo dạng External Style</h2>
+        <h3 class="external-heading">Tiêu đề sử dụng External Style</h3>
+        <p class="external-paragraph">Đoạn văn này được đổi màu bằng tệp CSS bên ngoài (style.css) được liên kết qua thẻ &lt;link&gt;.</p>
     </section>
-
-    <footer>
-        <h2>Thông tin liên hệ</h2>
-        <table>
-            <tr>
-                <th>Email</th>
-                <td>nguyenvana@example.com</td>
-            </tr>
-            <tr>
-                <th>Facebook</th>
-                <td><a href="#">facebook.com/nguyenvana</a></td>
-            </tr>
-        </table>
-    </footer>
 
 </body>
-</html>
+</html>ss
