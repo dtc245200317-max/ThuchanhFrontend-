@@ -1,58 +1,110 @@
-/* 1. Định dạng chung toàn trang */
+/* 1. Thiết lập cơ bản cho trang web */
+html {
+    height: 100%;
+}
+
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt mà khi nhấp menu */
-}
-
-/* 2. Thanh điều hướng dính (Sticky Navigation) */
-.sticky-menu {
-    position: sticky;  /* Chuyển đổi linh hoạt giữa relative và fixed */
-    top: 0;            /* Điểm kích hoạt ghim ở đỉnh màn hình */
-    background-color: #333333;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
-    width: 100%;
-    z-index: 1000;      /* Đảm bảo thanh menu luôn đè lên các section khi cuộn */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.sticky-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;             /* Sắp xếp các danh mục menu nằm ngang */
-    justify-content: center;   /* Căn giữa menu trên trang */
-}
-
-.sticky-menu ul li {
-    margin: 0 15px;
-}
-
-.sticky-menu ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 15px;
-    display: block;
-    transition: background-color 0.3s ease;
-}
-
-.sticky-menu ul li a:hover {
-    background-color: #575757;
-    border-radius: 5px;
-}
-
-/* 3. Khung nội dung các section */
-section {
-    padding: 100px 20px;
-    height: 100vh;            /* Độ cao bằng 100% màn hình để tạo thanh cuộn */
+    background-color: #f4f4f4;
+    min-height: 1500px; /* Đảm bảo đủ độ dài trang để kiểm tra cuộn */
+    padding-top: 70px;  /* Bù khoảng trống cho header cố định (tránh bị che khuất nội dung) */
     box-sizing: border-box;
 }
 
-#home { background-color: #f4f4f4; }
-#about { background-color: #dddddd; }
-#services { background-color: #bbbbbb; }
-#contact { background-color: #999999; }
+/* 2. Cấu hình Header cố định (Fixed Header) */
+.main-header {
+    position: fixed; /* Cố định header theo viewport */
+    top: 0;          /* Dán sát góc trên */
+    left: 0;         /* Dán sát góc trái */
+    width: 100%;     /* Trải rộng 100% chiều ngang */
+    background-color: #333333;
+    color: #ffffff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;   /* Dùng Flexbox để căn hai bên tiêu đề và menu */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;   /* Đảm bảo header luôn nằm trên tất cả nội dung khác */
+    box-sizing: border-box;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.main-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;   /* Căn danh mục menu thành hàng ngang */
+}
+
+.main-header nav ul li {
+    margin-left: 20px;
+}
+
+.main-header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+.main-header nav ul li a:hover {
+    color: #2ecc71;
+}
+
+/* 3. Khung chứa chính (Page Container - Flexbox Layout 3 cột) */
+.page-container {
+    display: flex;                  /* Kích hoạt Flexbox cho 3 cột */
+    justify-content: space-between;
+    margin: 20px;
+    gap: 20px;                      /* Tạo khoảng cách đều 20px giữa các cột */
+}
+
+/* Kiểu dáng dùng chung cho Sidebar */
+.sidebar {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;                 /* Giữ nguyên chiều rộng cố định, không co lại */
+}
+
+.left-sidebar {
+    width: 200px;                   /* Chiều rộng cố định sidebar trái */
+}
+
+.right-sidebar {
+    width: 200px;                   /* Chiều rộng cố định sidebar phải */
+}
+
+/* Khu vực nội dung chính trung tâm */
+.main-content {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;                   /* Chiếm toàn bộ không gian trống còn lại giữa 2 sidebar */
+}
+
+/* Định dạng nội dung bên trong Sidebar */
+.sidebar h3 {
+    margin-top: 0;
+    color: #333333;
+    border-bottom: 2px solid #eeeeee;
+    padding-bottom: 8px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+    color: #555555;
+    font-size: 14px;
+}
