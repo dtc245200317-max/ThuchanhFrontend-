@@ -1,110 +1,299 @@
-/* 1. Thiết lập cơ bản cho trang web */
-html {
-    height: 100%;
+/* 1. THIẾT LẬP CƠ BẢN (RESET & GLOBALS) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    min-height: 1500px; /* Đảm bảo đủ độ dài trang để kiểm tra cuộn */
-    padding-top: 70px;  /* Bù khoảng trống cho header cố định (tránh bị che khuất nội dung) */
-    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0f172a; /* Màu nền tối dịu mắt */
+    color: #f8fafc;
+    line-height: 1.6;
+    padding-top: 70px; /* Bù chiều cao cho fixed header */
 }
 
-/* 2. Cấu hình Header cố định (Fixed Header) */
+/* 2. HEADER CỐ ĐỊNH (FIXED HEADER & HEAD-LINK) */
 .main-header {
-    position: fixed; /* Cố định header theo viewport */
-    top: 0;          /* Dán sát góc trên */
-    left: 0;         /* Dán sát góc trái */
-    width: 100%;     /* Trải rộng 100% chiều ngang */
-    background-color: #333333;
-    color: #ffffff;
-    padding: 15px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    display: flex;   /* Dùng Flexbox để căn hai bên tiêu đề và menu */
-    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: #1e293b;
+    display: flex;
     align-items: center;
-    z-index: 1000;   /* Đảm bảo header luôn nằm trên tất cả nội dung khác */
-    box-sizing: border-box;
-}
-
-.main-header h1 {
-    margin: 0;
-    font-size: 24px;
-}
-
-.main-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;   /* Căn danh mục menu thành hàng ngang */
-}
-
-.main-header nav ul li {
-    margin-left: 20px;
-}
-
-.main-header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s ease;
-}
-
-.main-header nav ul li a:hover {
-    color: #2ecc71;
-}
-
-/* 3. Khung chứa chính (Page Container - Flexbox Layout 3 cột) */
-.page-container {
-    display: flex;                  /* Kích hoạt Flexbox cho 3 cột */
     justify-content: space-between;
-    margin: 20px;
-    gap: 20px;                      /* Tạo khoảng cách đều 20px giữa các cột */
+    padding: 0 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
 }
 
-/* Kiểu dáng dùng chung cho Sidebar */
-.sidebar {
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    flex-shrink: 0;                 /* Giữ nguyên chiều rộng cố định, không co lại */
+.logo a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.left-sidebar {
-    width: 200px;                   /* Chiều rộng cố định sidebar trái */
+.logo-text span {
+    color: #38bdf8;
 }
 
-.right-sidebar {
-    width: 200px;                   /* Chiều rộng cố định sidebar phải */
+/* Thanh tìm kiếm */
+.search-box {
+    display: flex;
+    gap: 5px;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
 }
 
-/* Khu vực nội dung chính trung tâm */
-.main-content {
-    background-color: #ffffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    flex-grow: 1;                   /* Chiếm toàn bộ không gian trống còn lại giữa 2 sidebar */
+.search-box input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #334155;
+    background-color: #0f172a;
+    color: #ffffff;
+    outline: none;
 }
 
-/* Định dạng nội dung bên trong Sidebar */
-.sidebar h3 {
-    margin-top: 0;
-    color: #333333;
-    border-bottom: 2px solid #eeeeee;
-    padding-bottom: 8px;
+.search-box button {
+    padding: 8px 16px;
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
 }
 
-.sidebar ul {
+.search-box button:hover {
+    background-color: #0369a1;
+}
+
+/* Head-link Navigation */
+.head-link ul {
+    display: flex;
     list-style: none;
-    padding: 0;
+    gap: 20px;
 }
 
-.sidebar ul li {
-    margin-bottom: 10px;
-    color: #555555;
+/* Loại bỏ gạch chân liên kết & hiệu ứng rê chuột (Hover) */
+.head-link a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: #cbd5e1;
+    font-size: 15px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+}
+
+.head-link a:hover,
+.head-link a.active {
+    color: #ffffff;        /* Đổi màu chữ */
+    font-weight: bold;    /* Bôi đậm chữ */
+    background-color: #334155;
+}
+
+/* 3. KHUNG BỐ CỤC CHÍNH (MAIN CONTAINER: LEFT & RIGHT CONTENT) */
+.main-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 25px;
+}
+
+/* Left Content: Menu danh sách video */
+.left-content {
+    flex: 0 0 340px; /* Chiều rộng cố định 340px */
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+    height: fit-content;
+}
+
+.left-content h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #334155;
+    padding-bottom: 10px;
+    color: #38bdf8;
+}
+
+.video-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.video-item {
+    display: flex;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #0f172a;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.video-item:hover,
+.video-item.active {
+    background-color: #334155;
+    transform: translateX(4px);
+}
+
+.video-item img {
+    width: 80px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.video-info h4 {
     font-size: 14px;
+    color: #f1f5f9;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.video-info span {
+    font-size: 12px;
+    color: #94a3b8;
+}
+
+/* Right Content: Khu vực phát video chính */
+.right-content {
+    flex: 1; /* Tự động dãn rộng chiếm diện tích còn lại */
+    background-color: #1e293b;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+/* Khung responsive cho Video iframe YouTube */
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* Tỷ lệ khung hình chuẩn 16:9 */
+    background-color: #000000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Chi tiết bài phát */
+.movie-details {
+    margin-top: 20px;
+}
+
+.movie-details h2 {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.movie-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.badge.quality {
+    background-color: #16a34a;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.movie-meta .views {
+    color: #cbd5e1;
+}
+
+.movie-meta .status {
+    color: #38bdf8;
+}
+
+.description {
+    color: #94a3b8;
+    font-size: 15px;
+}
+
+/* 4. FOOTER */
+.main-footer {
+    background-color: #0f172a;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+    padding: 25px 20px;
+    margin-top: 40px;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* 5. RESPONSIVE DESIGN (THIẾT BỊ TABLET VÀ ĐIỆN THOẠI) */
+
+/* Màn hình Tablet (Dưới 992px) */
+@media (max-width: 992px) {
+    .main-container {
+        flex-direction: column-reverse; /* Đưa video lên trên, danh sách xuống dưới */
+    }
+
+    .left-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .search-box {
+        max-width: 250px;
+    }
+}
+
+/* Màn hình Điện thoại di động (Dưới 600px) */
+@media (max-width: 600px) {
+    body {
+        padding-top: 120px; /* Bù chiều cao cho header co giãn 2 hàng */
+    }
+
+    .main-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+        gap: 10px;
+    }
+
+    .search-box {
+        order: 3;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .head-link ul {
+        gap: 8px;
+    }
+
+    .head-link a {
+        font-size: 13px;
+        padding: 5px 8px;
+    }
+
+    .movie-details h2 {
+        font-size: 18px;
+    }
 }

@@ -3,56 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Chủ Giản Lược - Fixed Header & Flexbox Layout</title>
+    <title>Web Xem Phim Hoạt Hình Trực Tuyến Vietsub</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header cố định trên đỉnh trang -->
+    <!-- 1. HEADER CỐ ĐỊNH (FIXED HEADER) -->
     <header class="main-header">
-        <h1>Tiêu đề Trang Web</h1>
-        <nav>
+        <div class="logo">
+            <a href="#">
+                <span class="logo-icon">🎬</span>
+                <span class="logo-text">HoạtHình<span>Kids</span></span>
+            </a>
+        </div>
+
+        <!-- Thanh tìm kiếm -->
+        <div class="search-box">
+            <input type="text" placeholder="Tìm kiếm tên phim hoạt hình...">
+            <button type="button">Tìm kiếm</button>
+        </div>
+
+        <!-- Head-link: Liên kết điều hướng chính -->
+        <nav class="head-link">
             <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#home" class="active">Trang chủ</a></li>
+                <li><a href="#new">Mới cập nhật</a></li>
+                <li><a href="#popular">Xem nhiều nhất</a></li>
+                <li><a href="#genres">Thể loại</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Khung chứa chính (Page Container) sử dụng Flexbox -->
-    <div class="page-container">
-        
-        <!-- Sidebar Trái -->
-        <aside class="sidebar left-sidebar">
-            <h3>Sidebar Trái</h3>
-            <ul>
-                <li>Mục 1: Danh mục bài viết</li>
-                <li>Mục 2: Tin tức mới nhất</li>
-                <li>Mục 3: Khuyến mãi hot</li>
+    <!-- 2. KHUNG NỘI DUNG CHÍNH (CONTENT CONTAINER) -->
+    <div class="main-container">
+
+        <!-- Left Content: Menu danh sách video có sẵn -->
+        <aside class="left-content">
+            <h3>Danh Sách Phim Nổi Bật</h3>
+            <ul class="video-list">
+                <li class="video-item active">
+                    <img src="https://picsum.photos/80/50?random=1" alt="Doraemon">
+                    <div class="video-info">
+                        <h4>Doraemon - Chú Mèo Máy Đến Từ Tương Lai</h4>
+                        <span>Tập 1 - Thuyết minh HD</span>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <img src="https://picsum.photos/80/50?random=2" alt="Conan">
+                    <div class="video-info">
+                        <h4>Thám Tử Lừng Danh Conan</h4>
+                        <span>Tập 100 - Thuyết minh Full HD</span>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <img src="https://picsum.photos/80/50?random=3" alt="Tom and Jerry">
+                    <div class="video-info">
+                        <h4>Tom & Jerry - Cuộc Rượt Bổi Hài Hước</h4>
+                        <span>Tập đặc biệt - HD 720p</span>
+                    </div>
+                </li>
+                <li class="video-item">
+                    <img src="https://picsum.photos/80/50?random=4" alt="Naruto">
+                    <div class="video-info">
+                        <h4>Hành Trình Nhẫn Giả Naruto</h4>
+                        <span>Tập 01 - Thuyết minh HD</span>
+                    </div>
+                </li>
             </ul>
         </aside>
 
-        <!-- Khu vực Nội dung chính -->
-        <main class="main-content">
-            <h2>Nội dung chính của trang</h2>
-            <p>Đây là khu vực chứa nội dung quan trọng nhất của trang web. Chúng ta sẽ đặt các bài viết, sản phẩm, hoặc thông tin chi tiết tại đây.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, amet. Magnam, cumque. Repellendus, ea! Reprehenderit, quod. Ullam, quas. Dolorum, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo. Dolore, quod. Quos, nemo.</p>
-        </main>
+        <!-- Right Content: Khu vực phát video chính -->
+        <main class="right-content">
+            <div class="player-wrapper">
+                <!-- Nhúng Video từ Youtube bằng iframe (Mặc định hiển thị phim đầu tiên) -->
+                <div class="iframe-container">
+                    <iframe 
+                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                        title="Doraemon Movie" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
 
-        <!-- Sidebar Phải -->
-        <aside class="sidebar right-sidebar">
-            <h3>Sidebar Phải</h3>
-            <p>Đây là một sidebar khác, có thể chứa quảng cáo, bài viết liên quan hoặc các widget khác.</p>
-        </aside>
+                <!-- Thẻ <video> HTML5 dự phòng cho video lưu cục bộ -->
+                <!-- 
+                <video controls width="100%" poster="https://picsum.photos/800/450">
+                    <source src="movie.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
+                </video> 
+                -->
+            </div>
+
+            <!-- Thông tin chi tiết phim đang xem -->
+            <div class="movie-details">
+                <h2>Doraemon - Chú Mèo Máy Đến Từ Tương Lai (Thuyết Minh Vietsub)</h2>
+                <div class="movie-meta">
+                    <span class="badge quality">FullHD 1080p</span>
+                    <span class="views">👁 1,250,000 lượt xem</span>
+                    <span class="status">✓ Chọn lọc - Lồng tiếng chuẩn</span>
+                </div>
+                <p class="description">
+                    Bộ phim hoạt hình dành cho thiếu nhi với nội dung giáo dục nhẹ nhàng, nhân văn. Câu chuyện xoay quanh chú mèo máy Doraemon đến từ thế kỷ 22 giúp đỡ cậu bạn Nobita hậu đậu thông qua những bảo bối thần kỳ.
+                </p>
+            </div>
+        </main>
 
     </div>
 
+    <!-- 3. FOOTER HỦY QUYỀN VÀ THÔNG TIN TRANG -->
+    <footer class="main-footer">
+        <p>&copy; 2026 HoạtHìnhKids. Trang web xem phim hoạt hình trực tuyến dành cho trẻ em. Nội dung đã qua kiểm duyệt kỹ lưỡng.</p>
+        <p>Chất lượng video tiêu chuẩn HD 720p - FullHD 1080p | Không quảng cáo độc hại.</p>
+    </footer>
+
 </body>
-</html>s
+</html>
