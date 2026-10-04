@@ -1,15 +1,32 @@
-.container {
-    width: 100%;
+/* Reset định dạng cơ bản và áp dụng box-sizing cho toàn bộ phần tử */
+* {
+    box-sizing: border-box; /* Đảm bảo padding không làm tăng tổng chiều rộng khối */
 }
 
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* Khung chứa toàn bộ bố cục */
+.container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+/* Cột bên trái: Chiếm 60% chiều rộng, đẩy sang trái */
 .left-column {
     width: 60%;
     float: left;
     background-color: lightblue;
     padding: 20px;
-    box-sizing: border-box;
 }
 
+/* Cột bên phải: Chiếm 38% chiều rộng, đẩy sang phải */
 .right-column {
     width: 38%;
     float: right;
@@ -17,9 +34,9 @@
     padding: 20px;
 }
 
-/* Xử lý float */
+/* Xử lý lỗi tràn/xẹp khung chứa (Clearfix) */
 .container::after {
     content: "";
     display: block;
     clear: both;
-}
+}s

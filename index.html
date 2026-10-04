@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục bằng Float</title>
+    <title>Thực hành: Bố cục hai cột bằng Float và Clear</title>
+    <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
+        <!-- Cột bên trái chứa nội dung chính -->
         <div class="left-column">
-            Cột bên trái chứa nội dung chính
+            <h2>Cột bên trái (Nội dung chính)</h2>
+            <p>Đây là cột chứa nội dung chính của trang web. Cột này chiếm 60% chiều rộng của khung chứa và được đẩy sang bên trái nhờ thuộc tính float: left.</p>
         </div>
 
+        <!-- Cột bên phải chứa sidebar -->
         <div class="right-column">
-            Cột bên phải chứa sidebar
+            <h3>Cột bên phải (Sidebar)</h3>
+            <p>Đây là cột sidebar chiếm 38% chiều rộng và được đẩy sang bên phải nhờ thuộc tính float: right.</p>
         </div>
     </div>
 
