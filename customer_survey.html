@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market Research Survey</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #eef2f5;
+            color: #333333;
+            margin: 0;
+            padding: 30px 15px;
+        }
+        .survey-card {
+            max-width: 650px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .survey-header {
+            border-bottom: 2px solid #0d6efd;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+        .survey-header h1 {
+            margin: 0 0 10px 0;
+            font-size: 26px;
+            color: #0d6efd;
+        }
+        .survey-header p {
+            margin: 0;
+            color: #666666;
+            font-size: 14px;
+        }
+        .form-group {
+            margin-bottom: 22px;
+        }
+        .form-group label.question-title {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+        select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .option-list label {
+            display: block;
+            font-weight: normal;
+            margin-bottom: 6px;
+            cursor: pointer;
+        }
+        .option-list input[type="radio"],
+        .option-list input[type="checkbox"] {
+            margin-right: 8px;
+        }
+        .btn-submit {
+            background-color: #0d6efd;
+            color: #ffffff;
+            border: none;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #0b5ed7;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="survey-card">
+        <div class="survey-header">
+            <h1>Market Research Survey</h1>
+            <p>Please take a few minutes to give us feedback about our products and services.</p>
+        </div>
+
+        <form action="#" method="POST">
+            
+            <!-- Question 1: Age Range -->
+            <div class="form-group">
+                <label class="question-title">What is your age range?</label>
+                <select name="age_range">
+                    <option value="18-24">18-24</option>
+                    <option value="25-34">25-34</option>
+                    <option value="35-44">35-44</option>
+                    <option value="45-54">45-54</option>
+                    <option value="55-64">55-64</option>
+                    <option value="65+">65 or older</option>
+                </select>
+            </div>
+
+            <!-- Question 2: Yearly Income -->
+            <div class="form-group">
+                <label class="question-title">What is your yearly income?</label>
+                <select name="yearly_income">
+                    <option value="0-24999">$0 - $24,999</option>
+                    <option value="25000-49999">$25,000 - $49,999</option>
+                    <option value="50000-99999">$50,000 - $99,999</option>
+                    <option value="100000+">$100,000+</option>
+                </select>
+            </div>
+
+            <!-- Question 3: Gender -->
+            <div class="form-group">
+                <label class="question-title">Gender</label>
+                <div class="option-list">
+                    <label><input type="radio" name="gender" value="Male" checked> Male</label>
+                    <label><input type="radio" name="gender" value="Female"> Female</label>
+                </div>
+            </div>
+
+            <!-- Question 4: Purchased Products -->
+            <div class="form-group">
+                <label class="question-title">Which of the following products have you purchased?</label>
+                <div class="option-list">
+                    <label><input type="checkbox" name="product" value="Product 1"> Product 1</label>
+                    <label><input type="checkbox" name="product" value="Product 2"> Product 2</label>
+                    <label><input type="checkbox" name="product" value="Product 3"> Product 3</label>
+                </div>
+            </div>
+
+            <!-- Question 5: Usage Frequency -->
+            <div class="form-group">
+                <label class="question-title">How often do you use our products?</label>
+                <div class="option-list">
+                    <label><input type="radio" name="frequency" value="Daily" checked> Daily</label>
+                    <label><input type="radio" name="frequency" value="Weekly"> Weekly</label>
+                    <label><input type="radio" name="frequency" value="Monthly"> Monthly</label>
+                    <label><input type="radio" name="frequency" value="Rarely"> Rarely</label>
+                    <label><input type="radio" name="frequency" value="Never"> Never</label>
+                </div>
+            </div>
+
+            <!-- Question 6: Satisfaction level -->
+            <div class="form-group">
+                <label class="question-title">Overall satisfaction with our service</label>
+                <div class="option-list">
+                    <label><input type="radio" name="satisfaction" value="Very Satisfied"> Very Satisfied</label>
+                    <label><input type="radio" name="satisfaction" value="Satisfied" checked> Satisfied</label>
+                    <label><input type="radio" name="satisfaction" value="Neutral"> Neutral</label>
+                    <label><input type="radio" name="satisfaction" value="Unsatisfied"> Unsatisfied</label>
+                </div>
+            </div>
+
+            <!-- Question 7: Comments -->
+            <div class="form-group">
+                <label class="question-title" for="comments">Do you have any comments or suggestions?</label>
+                <textarea id="comments" name="comments" placeholder="Write your feedback here..."></textarea>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn-submit">Submit Survey</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
