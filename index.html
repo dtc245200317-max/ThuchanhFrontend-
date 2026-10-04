@@ -3,36 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành: Tạo Menu Ngang Dropdown</title>
+    <title>Thực hành: Sticky Navigation Bar</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Khung chứa menu ngang chính -->
-    <div id="menu">
+    <!-- Thanh điều hướng dính cố định khi cuộn -->
+    <nav class="sticky-menu">
         <ul>
             <li><a href="#home">Trang chủ</a></li>
-            <li>
-                <a href="#products">Sản phẩm</a>
-                <!-- Menu con cấp 2 (Dropdown) -->
-                <ul>
-                    <li><a href="#phone">Điện thoại</a></li>
-                    <li><a href="#laptop">Laptop</a></li>
-                    <li><a href="#tablet">Máy tính bảng</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#services">Dịch vụ</a>
-                <!-- Menu con cấp 2 (Dropdown) -->
-                <ul>
-                    <li><a href="#warranty">Bảo hành</a></li>
-                    <li><a href="#repair">Sửa chữa</a></li>
-                </ul>
-            </li>
+            <li><a href="#about">Giới thiệu</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
             <li><a href="#contact">Liên hệ</a></li>
         </ul>
-    </div>
+    </nav>
+    
+    <!-- Khối nội dung Trang chủ -->
+    <section id="home">
+        <h1>Chào mừng đến với trang web của chúng tôi</h1>
+        <p>Hãy cuộn xuống để xem hiệu ứng sticky của thanh điều hướng.</p>
+    </section>
+    
+    <!-- Khối nội dung Giới thiệu -->
+    <section id="about">
+        <h2>Giới thiệu</h2>
+        <p>Nội dung giới thiệu chi tiết về doanh nghiệp và định hướng phát triển...</p>
+    </section>
+    
+    <!-- Khối nội dung Dịch vụ -->
+    <section id="services">
+        <h2>Dịch vụ</h2>
+        <p>Danh sách các dịch vụ cung cấp: Thiết kế website, Phát triển phần mềm, Tư vấn giải pháp IT...</p>
+    </section>
+    
+    <!-- Khối nội dung Liên hệ -->
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Thông tin liên hệ hotline và địa chỉ văn phòng...</p>
+    </section>
 
 </body>
-</html>s
+</html>

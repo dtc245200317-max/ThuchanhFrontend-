@@ -1,65 +1,58 @@
-/* 1. Reset font chữ và lề mặc định cho trang web */
-html, body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-/* 2. Định dạng thanh khung chứa menu chính (#menu) */
-#menu {
-    height: 35px;
-    background-color: #333333;
-    border-bottom: 3px solid #111111;
-}
-
-/* Reset khoảng cách và loại bỏ ký hiệu đánh dấu cho danh sách ul */
-#menu ul {
+/* 1. Định dạng chung toàn trang */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    list-style: none;
+    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt mà khi nhấp menu */
 }
 
-/* 3. Định dạng thẻ danh sách li (chuyển sang hiển thị hàng ngang) */
-#menu ul li {
-    float: left;             /* Xếp các mục chọn nằm ngang trên một hàng */
-    position: relative;      /* Làm gốc tọa độ định vị cho menu con */
-}
-
-/* 4. Định dạng các liên kết thẻ a bên trong menu */
-#menu ul li a {
-    display: block;          /* Biến liên kết thành thẻ khối phủ kín li */
-    height: 35px;
-    line-height: 35px;       /* Căn chữ giữa theo chiều dọc */
-    padding: 0 20px;         /* Khoảng đệm trái/phải cho mỗi mục menu */
-    color: #ffffff;
-    text-decoration: none;  /* Bỏ gạch chân mặc định */
-    font-weight: bold;
-    font-size: 14px;
-}
-
-/* 5. Sự kiện khi rê chuột qua các liên kết menu (đổi nền sang màu đỏ) */
-#menu ul li a:hover {
-    background-color: red;
-}
-
-/* 6. Định dạng danh sách con (Menu Dropdown cấp 2) */
-#menu ul ul {
-    position: absolute;      /* Định vị tuyệt đối dựa theo thẻ li cha */
-    top: 35px;               /* Đặt menu con nằm ngay dưới thanh menu chính */
-    left: 0;
-    visibility: hidden;      /* Ẩn danh sách con theo mặc định */
+/* 2. Thanh điều hướng dính (Sticky Navigation) */
+.sticky-menu {
+    position: sticky;  /* Chuyển đổi linh hoạt giữa relative và fixed */
+    top: 0;            /* Điểm kích hoạt ghim ở đỉnh màn hình */
     background-color: #333333;
-    min-width: 160px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    z-index: 1000;      /* Đảm bảo thanh menu luôn đè lên các section khi cuộn */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Đặt các mục con nằm dọc lại trong danh sách dropdown */
-#menu ul ul li {
-    float: none;             /* Hủy bỏ thuộc tính float left của li cha */
+.sticky-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;             /* Sắp xếp các danh mục menu nằm ngang */
+    justify-content: center;   /* Căn giữa menu trên trang */
 }
 
-/* 7. Hiển thị menu con khi đưa con trỏ chuột qua mục chọn ở menu cha */
-#menu ul li:hover ul {
-    visibility: visible;     /* Hiện danh sách con khi hover vào li cha */
+.sticky-menu ul li {
+    margin: 0 15px;
 }
+
+.sticky-menu ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sticky-menu ul li a:hover {
+    background-color: #575757;
+    border-radius: 5px;
+}
+
+/* 3. Khung nội dung các section */
+section {
+    padding: 100px 20px;
+    height: 100vh;            /* Độ cao bằng 100% màn hình để tạo thanh cuộn */
+    box-sizing: border-box;
+}
+
+#home { background-color: #f4f4f4; }
+#about { background-color: #dddddd; }
+#services { background-color: #bbbbbb; }
+#contact { background-color: #999999; }
