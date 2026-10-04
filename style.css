@@ -1,54 +1,65 @@
-/* 1. Reset thuộc tính căn lề và font chữ mặc định của trình duyệt */
-html, body, ul, li {
-    margin: 0;
-    padding: 0;
+/* 1. Reset font chữ và lề mặc định cho trang web */
+html, body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    padding: 30px;
+    margin: 0;
+    padding: 20px;
     background-color: #f4f4f4;
 }
 
-/* 2. Loại bỏ dấu chấm đầu dòng (bullet) của tất cả danh sách */
-#menu ul {
-    list-style: none;
-}
-
-/* 3. Định dạng các mục chọn chính (li) */
-#menu li {
-    list-style: none;
-    position: relative;      /* Làm mốc tọa độ để đặt menu con nằm kế bên */
-    width: 120px;            /* Chiều rộng nội dung */
-    height: 30px;            /* Chiều cao cố định */
-    padding: 0 20px;         /* Đệm lề trái/phải 20px (Tổng chiều rộng khung = 160px) */
-    background-color: black;
-    line-height: 30px;       /* Căn giữa chữ theo chiều dọc */
-    cursor: pointer;         /* Đổi con trỏ chuột sang hình bàn tay */
-    border-bottom: 1px solid #222222;
-}
-
-/* 4. Định dạng thẻ liên kết (a) bên trong các li */
-#menu li a {
-    text-decoration: none;  /* Bỏ gạch chân mặc định của liên kết */
-    color: white;           /* Màu chữ trắng */
-    display: block;          /* Phủ kín thẻ li giúp dễ nhấp chuột */
-}
-
-/* 5. Hiệu ứng đổi màu nền khi đưa con trỏ chuột vào mục chọn */
-#menu li:hover {
+/* 2. Định dạng thanh khung chứa menu chính (#menu) */
+#menu {
+    height: 35px;
     background-color: #333333;
+    border-bottom: 3px solid #111111;
 }
 
-/* 6. Định dạng danh sách con (Menu Dropdown) */
-#menu li ul {
+/* Reset khoảng cách và loại bỏ ký hiệu đánh dấu cho danh sách ul */
+#menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* 3. Định dạng thẻ danh sách li (chuyển sang hiển thị hàng ngang) */
+#menu ul li {
+    float: left;             /* Xếp các mục chọn nằm ngang trên một hàng */
+    position: relative;      /* Làm gốc tọa độ định vị cho menu con */
+}
+
+/* 4. Định dạng các liên kết thẻ a bên trong menu */
+#menu ul li a {
+    display: block;          /* Biến liên kết thành thẻ khối phủ kín li */
+    height: 35px;
+    line-height: 35px;       /* Căn chữ giữa theo chiều dọc */
+    padding: 0 20px;         /* Khoảng đệm trái/phải cho mỗi mục menu */
+    color: #ffffff;
+    text-decoration: none;  /* Bỏ gạch chân mặc định */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* 5. Sự kiện khi rê chuột qua các liên kết menu (đổi nền sang màu đỏ) */
+#menu ul li a:hover {
+    background-color: red;
+}
+
+/* 6. Định dạng danh sách con (Menu Dropdown cấp 2) */
+#menu ul ul {
     position: absolute;      /* Định vị tuyệt đối dựa theo thẻ li cha */
-    top: 0;                  /* Căn thẳng hàng với đỉnh trên của li cha */
-    left: 160px;             /* Đặt mép trái cách đúng bằng chiều rộng thẻ cha */
-    visibility: hidden;      /* Ẩn danh sách con mặc định */
+    top: 35px;               /* Đặt menu con nằm ngay dưới thanh menu chính */
+    left: 0;
+    visibility: hidden;      /* Ẩn danh sách con theo mặc định */
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* 7. Hiển thị menu con khi di chuột vào mục chọn tương ứng */
-#menu li:hover > ul {
-    visibility: visible;     /* Hiện menu con khi rê chuột vào li cha */
+/* Đặt các mục con nằm dọc lại trong danh sách dropdown */
+#menu ul ul li {
+    float: none;             /* Hủy bỏ thuộc tính float left của li cha */
+}
+
+/* 7. Hiển thị menu con khi đưa con trỏ chuột qua mục chọn ở menu cha */
+#menu ul li:hover ul {
+    visibility: visible;     /* Hiện danh sách con khi hover vào li cha */
 }
