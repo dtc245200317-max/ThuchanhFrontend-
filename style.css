@@ -1,0 +1,83 @@
+/* Custom CSS for CodeGym Career Landing Page */
+
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Navbar active state & backdrop */
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hero Section Mask adjustments */
+#hero {
+    min-height: 100vh;
+}
+
+#hero .mask {
+    min-height: 100vh;
+}
+
+/* Divider line style */
+.divider {
+    height: 4px;
+    width: 60px;
+    border-radius: 2px;
+}
+
+/* Icon Box for About section */
+.icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Roadmap step card */
+.step-number {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+/* Border utilities */
+.border-indigo {
+    border-color: #3f51b5 !important;
+}
+
+.border-warning {
+    border-color: #ffbb33 !important;
+}
+
+/* Card hover animation */
+.hoverable {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hoverable:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive divider border on stats counter */
+@media (min-width: 768px) {
+    .border-right-md {
+        border-right: 1px solid #e0e0e0;
+    }
+}
+
+/* Testimonial avatar overlay */
+.testimonial-card .avatar {
+    width: 90px;
+    height: 90px;
+    margin-top: -45px;
+    overflow: hidden;
+    border: 3px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card .card-up {
+    height: 100px;
+    overflow: hidden;
+}
