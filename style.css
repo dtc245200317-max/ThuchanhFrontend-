@@ -1,46 +1,54 @@
-/* Đặt margin mặc định của toàn trang về 0 */
-body {
+/* 1. Reset thuộc tính căn lề và font chữ mặc định của trình duyệt */
+html, body, ul, li {
     margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* --------------------------------------------------
- * THANH MENU CỐ ĐỊNH (.navbar)
- * -------------------------------------------------- */
-.navbar {
-    overflow: hidden;
+body {
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+/* 2. Loại bỏ dấu chấm đầu dòng (bullet) của tất cả danh sách */
+#menu ul {
+    list-style: none;
+}
+
+/* 3. Định dạng các mục chọn chính (li) */
+#menu li {
+    list-style: none;
+    position: relative;      /* Làm mốc tọa độ để đặt menu con nằm kế bên */
+    width: 120px;            /* Chiều rộng nội dung */
+    height: 30px;            /* Chiều cao cố định */
+    padding: 0 20px;         /* Đệm lề trái/phải 20px (Tổng chiều rộng khung = 160px) */
+    background-color: black;
+    line-height: 30px;       /* Căn giữa chữ theo chiều dọc */
+    cursor: pointer;         /* Đổi con trỏ chuột sang hình bàn tay */
+    border-bottom: 1px solid #222222;
+}
+
+/* 4. Định dạng thẻ liên kết (a) bên trong các li */
+#menu li a {
+    text-decoration: none;  /* Bỏ gạch chân mặc định của liên kết */
+    color: white;           /* Màu chữ trắng */
+    display: block;          /* Phủ kín thẻ li giúp dễ nhấp chuột */
+}
+
+/* 5. Hiệu ứng đổi màu nền khi đưa con trỏ chuột vào mục chọn */
+#menu li:hover {
     background-color: #333333;
-    position: fixed; /* Cố định menu theo khung nhìn trình duyệt (viewport) */
-    top: 0;          /* Ghim menu ở đỉnh trên cùng */
-    left: 0;         /* Căn lề mép trái */
-    width: 100%;     /* Phủ kín 100% chiều rộng màn hình */
-    z-index: 1000;   /* Đảm bảo menu luôn nổi lên trên nội dung khi cuộn */
 }
 
-/* Định dạng các liên kết bên trong menu */
-.navbar a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: background-color 0.3s ease;
+/* 6. Định dạng danh sách con (Menu Dropdown) */
+#menu li ul {
+    position: absolute;      /* Định vị tuyệt đối dựa theo thẻ li cha */
+    top: 0;                  /* Căn thẳng hàng với đỉnh trên của li cha */
+    left: 160px;             /* Đặt mép trái cách đúng bằng chiều rộng thẻ cha */
+    visibility: hidden;      /* Ẩn danh sách con mặc định */
 }
 
-/* Hiệu ứng rê chuột (Hover) */
-.navbar a:hover {
-    background-color: #ddd;
-    color: #000;
-}
-
-/* --------------------------------------------------
- * NỘI DUNG CHÍNH TRANG WEB (.main)
- * -------------------------------------------------- */
-.main {
-    padding: 16px;
-    margin-top: 50px; /* Bù khoảng trống chiều cao cho navbar cố định */
-    height: 1500px;  /* Tạo độ dài đủ lớn để trình duyệt xuất hiện thanh cuộn */
-    background-color: #f8f9fa;
+/* 7. Hiển thị menu con khi di chuột vào mục chọn tương ứng */
+#menu li:hover > ul {
+    visibility: visible;     /* Hiện menu con khi rê chuột vào li cha */
 }

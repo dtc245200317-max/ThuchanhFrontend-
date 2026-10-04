@@ -3,66 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng dẫn tạo Fixed Menu</title>
+    <title>Thực hành: Tạo Menu Dọc Dropdown</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Thanh menu điều hướng cố định (Fixed Header) -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
-
-    <!-- Khối nội dung chính (Main Content) -->
-    <div class="main">
-        <h1>Fixed Top Menu</h1>
-        <h2>Scroll this page to see the effect</h2>
-        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text someDưới đây là **mã nguồn HTML/CSS hoàn chỉnh**, **giải thích thuộc tính CSS quan trọng**, **câu lệnh Git để đẩy code lên GitHub** và **bản mẫu nộp bài** đầy đủ cho bài thực hành này:
-
----
-
-### PHẦN 1: MÃ NGUỒN TỆP `index.html`
-
-Bạn tạo mới hoặc cập nhật tệp **`index.html`** trong thư mục dự án (`D:\Thuchanh`):
-
-```html
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hướng dẫn tạo Fixed Menu</title>
-    <!-- Liên kết tệp CSS bên ngoài -->
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <!-- Thanh menu điều hướng cố định -->
-    <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-        <a href="#about">About</a>
-    </div>
-
-    <!-- Nội dung chính trang web -->
-    <div class="main">
-        <h1>Fixed Top Menu</h1>
-        <h2>Scroll this page to see the effect</h2>
-        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
-        
-        <p>Thanh điều hướng ở trên sẽ luôn giữ nguyên vị trí ở mép trên màn hình khi bạn cuộn trang xuống.</p>
-        <p>Nội dung thử nghiệm để kiểm tra hiệu ứng cuộn trang...</p>
-        <p>Some text some text some text some text...</p>
-        <p>Some text some text some text some text...</p>
+    <!-- Khung chứa menu dọc chính -->
+    <div id="menu">
+        <ul>
+            <li><a href="#home">Trang chủ</a></li>
+            <li>
+                <a href="#products">Sản phẩm</a>
+                <!-- Menu con cấp 2 (Dropdown) -->
+                <ul>
+                    <li><a href="#phone">Điện thoại</a></li>
+                    <li><a href="#laptop">Laptop</a></li>
+                    <li><a href="#tablet">Máy tính bảng</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#services">Dịch vụ</a>
+                <!-- Menu con cấp 2 (Dropdown) -->
+                <ul>
+                    <li><a href="#warranty">Bảo hành</a></li>
+                    <li><a href="#repair">Sửa chữa</a></li>
+                </ul>
+            </li>
+            <li><a href="#contact">Liên hệ</a></li>
+        </ul>
     </div>
 
 </body>
