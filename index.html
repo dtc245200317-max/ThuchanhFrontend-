@@ -3,159 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Open Source Records - Box Model Practice</title>
-    <style type="text/css">
-      /* 1. Reset các giá trị mặc định của trình duyệt */
-      html, body, h1, h2, h3, h4, ul, ol, li, p, a {
-        padding: 0;
-        border: 0;
-        margin: 0;
-      }
-
-      /* 2. Cấu hình Box Model & bố cục chính cho trang web (body) */
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        width: 650px;             /* Giới hạn chiều rộng khung nội dung */
-        margin: 30px auto;        /* Căn giữa trang web theo chiều ngang */
-        padding: 25px;            /* Khoảng đệm bên trong trang */
-        background-color: #f8f9fa;/* Màu nền dịu mắt */
-        color: #333333;
-        line-height: 1.6;
-      }
-
-      /* 3. Tiêu đề chính H1 */
-      h1 {
-        font-size: 32px;
-        color: #000000;
-        border-bottom: 3px solid #440000; /* Đường gạch chân tạo điểm nhấn */
-        padding-bottom: 10px;
-        margin-bottom: 15px;
-      }
-
-      /* 4. Menu điều hướng top (Danh sách ul đầu tiên) */
-      body > ul:nth-of-type(1) {
-        list-style: none;
-        padding: 10px 0;
-        margin-bottom: 25px;
-        border-bottom: 1px solid #dddddd;
-      }
-
-      body > ul:nth-of-type(1) li {
-        display: inline-block;    /* Hiển thị danh sách theo hàng ngang */
-        margin-right: 20px;
-      }
-
-      /* 5. Định dạng các tiêu đề H2 và H3 */
-      h2 {
-        color: #000000;
-        font-size: 22px;
-        border-bottom: 2px solid #666666;
-        padding-bottom: 5px;
-        margin-top: 25px;
-        margin-bottom: 15px;
-      }
-
-      h3 {
-        color: #333333;
-        font-size: 16px;
-        margin-top: 15px;
-        margin-bottom: 8px;
-      }
-
-      /* 6. Định dạng thẻ đoạn văn p và liên kết a */
-      p {
-        color: #444444;
-        font-size: 14px;
-        margin-bottom: 12px;
-      }
-
-      a {
-        color: #440000;
-        text-decoration: none;
-        font-weight: bold;
-      }
-
-      a:hover {
-        text-decoration: underline; /* Hiệu ứng gạch chân khi rê chuột */
-      }
-
-      /* 7. Danh sách thành viên (ul thứ 2) */
-      body > ul:nth-of-type(2) {
-        list-style-type: square;
-        margin-left: 25px;
-        margin-bottom: 20px;
-      }
-
-      body > ul:nth-of-type(2) li {
-        margin-bottom: 6px;
-        color: #444444;
-      }
-
-      /* 8. Danh sách lịch diễn Tour Dates (ul thứ 3) */
-      body > ul:nth-of-type(3) {
-        list-style: none;
-        margin-top: 15px;
-      }
-
-      body > ul:nth-of-type(3) li {
-        background-color: #ffffff;
-        border: 1px solid #e0e0e0;
-        border-left: 5px solid #440000; /* Viền đỏ tạo điểm nhấn bên trái */
-        padding: 12px 18px;
-        margin-bottom: 12px;
-        border-radius: 4px;
-      }
-
-      body > ul:nth-of-type(3) li p {
-        margin-bottom: 4px;
-      }
-    </style>
+    <title>Hướng dẫn tạo Fixed Menu</title>
+    <!-- Liên kết tệp CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>Open Source Records</h1>
+    <!-- Thanh menu điều hướng cố định (Fixed Header) -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
 
-    <!-- Menu liên kết -->
-    <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="bands.html">Bands</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+    <!-- Khối nội dung chính (Main Content) -->
+    <div class="main">
+        <h1>Fixed Top Menu</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text someDưới đây là **mã nguồn HTML/CSS hoàn chỉnh**, **giải thích thuộc tính CSS quan trọng**, **câu lệnh Git để đẩy code lên GitHub** và **bản mẫu nộp bài** đầy đủ cho bài thực hành này:
 
-    <h2>Regular Expressions</h2>
+---
 
-    <h3>Bio</h3>
-    <p>Regular Expressionists are a hip-hop trio from New York City.</p>
+### PHẦN 1: MÃ NGUỒN TỆP `index.html`
 
-    <h3>Members</h3>
-    <ul>
-      <li>Rekt - Vocals</li>
-      <li>Face-like - Vocals</li>
-      <li>DJ Regex Capture - Decks</li>
-    </ul>
+Bạn tạo mới hoặc cập nhật tệp **`index.html`** trong thư mục dự án (`D:\Thuchanh`):
 
-    <h3>Albums</h3>
-    <p>This group has no albums released, but they are recording one album right now.</p>
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn tạo Fixed Menu</title>
+    <!-- Liên kết tệp CSS bên ngoài -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-    <h2>Tour Dates</h2>
-    <ul>
-      <li>
-        <p>July 16th, 2014 @ 7:00pm</p>
-        <p><a href="http://hob.com">House of Blues</a> - Orlando, FL</p>
-      </li>
-      <li>
-        <p>July 17th, 2014 @ 7:30pm</p>
-        <p>Jannus Landing - Tampa, FL</p>
-      </li>
-      <li>
-        <p>July 19th, 2014 @ 8:00pm</p>
-        <p>The Tabernacle - Atlanta, GA</p>
-      </li>
-      <li>
-        <p>July 20th, 2014 @ 7:30pm</p>
-        <p>40 Watt Club - Athens, GA</p>
-      </li>
-    </ul>
+    <!-- Thanh menu điều hướng cố định -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <!-- Nội dung chính trang web -->
+    <div class="main">
+        <h1>Fixed Top Menu</h1>
+        <h2>Scroll this page to see the effect</h2>
+        <h2>The navigation bar will stay at the top of the page while scrolling</h2>
+        
+        <p>Thanh điều hướng ở trên sẽ luôn giữ nguyên vị trí ở mép trên màn hình khi bạn cuộn trang xuống.</p>
+        <p>Nội dung thử nghiệm để kiểm tra hiệu ứng cuộn trang...</p>
+        <p>Some text some text some text some text...</p>
+        <p>Some text some text some text some text...</p>
+    </div>
 
 </body>
 </html>
