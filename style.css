@@ -1,83 +1,70 @@
-/* --------------------------------------------------
- * 1. THIẾT LẬP MÀU NỀN CHO TRANG WEB (background-color)
- * -------------------------------------------------- */
+/* Định dạng chung toàn trang */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #e9ecef; /* Màu nền xám nhạt dịu mắt cho trang web */
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
     color: #333333;
-    padding: 40px 20px;
+    padding: 30px;
     margin: 0;
-    text-align: center;
 }
 
-/* Định dạng tiêu đề chính h1 */
 h1 {
-    color: #0d6efd;
-    margin-bottom: 15px;
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 30px;
 }
 
-/* Định dạng đoạn văn mô tả */
-.description {
-    font-size: 16px;
-    line-height: 1.6;
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    color: #495057;
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 /* --------------------------------------------------
- * 2. KHỐI DIV CHỨA NỘI DUNG QUAN TRỌNG
- * Thiết lập ảnh nền (background-image) và căn giữa nội dung
+ * QUY TẮC CHUNG CHO CÁC THẺ (.card)
  * -------------------------------------------------- */
-.important-box {
-    /* 
-     * Sử dụng đường dẫn ảnh local 'background.jpg' 
-     * (kèm lớp phủ màu chuyển xám/xanh gradient để chữ nổi bật) 
-     */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
-    
-    /* Thiết lập cho ảnh nền phủ kín và không bị lặp lại */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    /* Căn giữa toàn bộ nội dung bên trong khối div */
-    text-align: center;
-
-    /* Định dạng kích thước, màu chữ và khoảng cách */
+.card {
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+    border: 5px solid #3498db; /* Màu xanh dương */
+    margin: 20px;
     color: #ffffff;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 50px 30px;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
 }
 
-.important-box h2 {
-    font-size: 26px;
+.card h3 {
     margin-top: 0;
-    margin-bottom: 15px;
-    color: #ffffff;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
-.important-box p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 25px;
+.card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
 }
 
-/* Nút bấm hành động bên trong khối div */
-.btn-action {
-    display: inline-block;
-    background-color: #0d6efd;
-    color: #ffffff;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+/* --------------------------------------------------
+ * 1. THẺ THỨ NHẤT: content-box (Màu xanh lá)
+ * -------------------------------------------------- */
+.card:nth-child(1) {
+    box-sizing: content-box;
+    background-color: #2ecc71;
 }
 
-.btn-action:hover {
-    background-color: #0b5ed7;
+/* --------------------------------------------------
+ * 2. THẺ THỨ HAI: border-box (Màu vàng)
+ * -------------------------------------------------- */
+.card:nth-child(2) {
+    box-sizing: border-box;
+    background-color: #f1c40f;
+    color: #2c3e50; /* Đổi màu chữ tối cho dễ đọc trên nền vàng */
+}
+
+/* --------------------------------------------------
+ * 3. THẺ THỨ BA: border-box (Màu đỏ)
+ * -------------------------------------------------- */
+.card:nth-child(3) {
+    box-sizing: border-box;
+    background-color: #e74c3c;
 }

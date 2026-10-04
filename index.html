@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang web với Màu nền và Ảnh nền</title>
+    <title>Bài tập: Sử dụng Box Model 1</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Tiêu đề chính -->
-    <h1>Chào mừng đến với trang web của tôi</h1>
+    <h1>BÀI TẬP: MÔ HÌNH HỘP (CSS BOX MODEL)</h1>
 
-    <!-- Đoạn văn mô tả trang web -->
-    <p class="description">
-        Trang web này giúp thực hành việc sử dụng thuộc tính <code>background-color</code> để thiết lập màu nền cho toàn bộ trang web và thuộc tính <code>background-image</code> để chèn ảnh nền nổi bật cho khối nội dung.
-    </p>
+    <div class="card-container">
+        <!-- Thẻ 1: content-box (Màu xanh lá) -->
+        <div class="card">
+            <h3>Thẻ 1 (content-box)</h3>
+            <p>Sử dụng <code>box-sizing: content-box</code>. Kích thước thực tế bị phình to ra thêm padding và border.</p>
+        </div>
 
-    <!-- Khối div chứa nội dung quan trọng có ảnh nền -->
-    <div class="important-box">
-        <h2>Thông Báo Quan Trọng</h2>
-        <p>Chào mừng bạn đã ghé thăm! Đây là khối thông tin nổi bật được trang trí bằng ảnh nền phong cách hiện đại và căn giữa nội dung.</p>
-        <a href="#" class="btn-action">Khám phá ngay</a>
+        <!-- Thẻ 2: border-box (Màu vàng) -->
+        <div class="card">
+            <h3>Thẻ 2 (border-box)</h3>
+            <p>Sử dụng <code>box-sizing: border-box</code>. Kích thước hiển thị đúng bằng 280x150 px đã khai báo.</p>
+        </div>
+
+        <!-- Thẻ 3: border-box (Màu đỏ) -->
+        <div class="card">
+            <h3>Thẻ 3 (border-box)</h3>
+            <p>Sử dụng <code>box-sizing: border-box</code>. Padding và border tự động co lùi vào bên trong.</p>
+        </div>
     </div>
 
 </body>
