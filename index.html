@@ -3,119 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Xem Phim Hoạt Hình Trực Tuyến Vietsub</title>
-    <!-- Liên kết tệp CSS bên ngoài -->
+    <title>Bố cục bằng Float</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. HEADER CỐ ĐỊNH (FIXED HEADER) -->
-    <header class="main-header">
-        <div class="logo">
-            <a href="#">
-                <span class="logo-icon">🎬</span>
-                <span class="logo-text">HoạtHình<span>Kids</span></span>
-            </a>
+    <div class="container">
+        <div class="left-column">
+            Cột bên trái chứa nội dung chính
         </div>
 
-        <!-- Thanh tìm kiếm -->
-        <div class="search-box">
-            <input type="text" placeholder="Tìm kiếm tên phim hoạt hình...">
-            <button type="button">Tìm kiếm</button>
+        <div class="right-column">
+            Cột bên phải chứa sidebar
         </div>
-
-        <!-- Head-link: Liên kết điều hướng chính -->
-        <nav class="head-link">
-            <ul>
-                <li><a href="#home" class="active">Trang chủ</a></li>
-                <li><a href="#new">Mới cập nhật</a></li>
-                <li><a href="#popular">Xem nhiều nhất</a></li>
-                <li><a href="#genres">Thể loại</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <!-- 2. KHUNG NỘI DUNG CHÍNH (CONTENT CONTAINER) -->
-    <div class="main-container">
-
-        <!-- Left Content: Menu danh sách video có sẵn -->
-        <aside class="left-content">
-            <h3>Danh Sách Phim Nổi Bật</h3>
-            <ul class="video-list">
-                <li class="video-item active">
-                    <img src="https://picsum.photos/80/50?random=1" alt="Doraemon">
-                    <div class="video-info">
-                        <h4>Doraemon - Chú Mèo Máy Đến Từ Tương Lai</h4>
-                        <span>Tập 1 - Thuyết minh HD</span>
-                    </div>
-                </li>
-                <li class="video-item">
-                    <img src="https://picsum.photos/80/50?random=2" alt="Conan">
-                    <div class="video-info">
-                        <h4>Thám Tử Lừng Danh Conan</h4>
-                        <span>Tập 100 - Thuyết minh Full HD</span>
-                    </div>
-                </li>
-                <li class="video-item">
-                    <img src="https://picsum.photos/80/50?random=3" alt="Tom and Jerry">
-                    <div class="video-info">
-                        <h4>Tom & Jerry - Cuộc Rượt Bổi Hài Hước</h4>
-                        <span>Tập đặc biệt - HD 720p</span>
-                    </div>
-                </li>
-                <li class="video-item">
-                    <img src="https://picsum.photos/80/50?random=4" alt="Naruto">
-                    <div class="video-info">
-                        <h4>Hành Trình Nhẫn Giả Naruto</h4>
-                        <span>Tập 01 - Thuyết minh HD</span>
-                    </div>
-                </li>
-            </ul>
-        </aside>
-
-        <!-- Right Content: Khu vực phát video chính -->
-        <main class="right-content">
-            <div class="player-wrapper">
-                <!-- Nhúng Video từ Youtube bằng iframe (Mặc định hiển thị phim đầu tiên) -->
-                <div class="iframe-container">
-                    <iframe 
-                        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                        title="Doraemon Movie" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-
-                <!-- Thẻ <video> HTML5 dự phòng cho video lưu cục bộ -->
-                <!-- 
-                <video controls width="100%" poster="https://picsum.photos/800/450">
-                    <source src="movie.mp4" type="video/mp4">
-                    Trình duyệt của bạn không hỗ trợ thẻ video HTML5.
-                </video> 
-                -->
-            </div>
-
-            <!-- Thông tin chi tiết phim đang xem -->
-            <div class="movie-details">
-                <h2>Doraemon - Chú Mèo Máy Đến Từ Tương Lai (Thuyết Minh Vietsub)</h2>
-                <div class="movie-meta">
-                    <span class="badge quality">FullHD 1080p</span>
-                    <span class="views">👁 1,250,000 lượt xem</span>
-                    <span class="status">✓ Chọn lọc - Lồng tiếng chuẩn</span>
-                </div>
-                <p class="description">
-                    Bộ phim hoạt hình dành cho thiếu nhi với nội dung giáo dục nhẹ nhàng, nhân văn. Câu chuyện xoay quanh chú mèo máy Doraemon đến từ thế kỷ 22 giúp đỡ cậu bạn Nobita hậu đậu thông qua những bảo bối thần kỳ.
-                </p>
-            </div>
-        </main>
-
     </div>
-
-    <!-- 3. FOOTER HỦY QUYỀN VÀ THÔNG TIN TRANG -->
-    <footer class="main-footer">
-        <p>&copy; 2026 HoạtHìnhKids. Trang web xem phim hoạt hình trực tuyến dành cho trẻ em. Nội dung đã qua kiểm duyệt kỹ lưỡng.</p>
-        <p>Chất lượng video tiêu chuẩn HD 720p - FullHD 1080p | Không quảng cáo độc hại.</p>
-    </footer>
 
 </body>
 </html>
