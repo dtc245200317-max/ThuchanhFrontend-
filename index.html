@@ -2,86 +2,24 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài tập: Tạo Layout với các thẻ HTML5 và CSS</title>
-    <!-- Liên kết tệp CSS bên ngoài -->
+    <title>Bố cục với display</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- Khung chứa toàn bộ trang web -->
-    <div id="main-container">
-
-        <!-- 1. HEADER: Phân vùng đầu trang (Banner, Logo) -->
-        <header>
-            <h1>CODEGYM HTML5 LAYOUT</h1>
-            <p>Sử dụng thẻ Semantic HTML5 để xây dựng cấu trúc trang web hiện đại</p>
-        </header>
-
-        <!-- 2. NAV: Thanh điều hướng menu chính -->
-        <nav>
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Giới thiệu</a></li>
-                <li><a href="#">Khóa học</a></li>
-                <li><a href="#">Tin tức</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
-
-        <!-- Khung chứa 3 cột nội dung -->
-        <div class="content-wrapper">
-
-            <!-- 3. ASIDE (Trái): Cột bên trái chứa danh mục -->
-            <aside class="sidebar-left">
-                <h3>Danh mục bài viết</h3>
-                <ul>
-                    <li><a href="#">Lập trình HTML5/CSS3</a></li>
-                    <li><a href="#">JavaScript Căn bản</a></li>
-                    <li><a href="#">ReactJS cho Người mới</a></li>
-                    <li><a href="#">Kinh nghiệm IT 2026</a></li>
-                </ul>
-            </aside>
-
-            <!-- 4. SECTION: Phân vùng nội dung chính ở giữa -->
-            <section class="main-content">
-                <h2>Tin tức nổi bật</h2>
-
-                <!-- ARTICLE 1: Bài viết độc lập số 1 -->
-                <article>
-                    <h3>1. Sự ra đời của các thẻ Semantic HTML5</h3>
-                    <p>Các thẻ như header, nav, section, article, aside và footer giúp cấu trúc trang web trở nên rõ ràng, tối ưu hóa cho công cụ tìm kiếm (SEO) và dễ bảo trì hơn so với việc lạm dụng quá nhiều thẻ div.</p>
-                </article>
-
-                <!-- ARTICLE 2: Bài viết độc lập số 2 -->
-                <article>
-                    <h3>2. Tầm quan trọng của Bố cục CSS</h3>
-                    <p>Kết hợp các thẻ HTML5 Semantic với CSS giúp bạn xây dựng giao diện chuyên nghiệp, tương thích tốt trên nhiều thiết bị và kích thước màn hình khác nhau.</p>
-                </article>
-            </section>
-
-            <!-- 5. ASIDE (Phải): Cột bên phải chứa thông tin phụ -->
-            <aside class="sidebar-right">
-                <h3>Thông tin phụ</h3>
-                <div class="widget">
-                    <h4>Lịch sự kiện</h4>
-                    <p>📅 Demo Day Frontend - Khóa 2026</p>
-                </div>
-                <div class="widget">
-                    <h4>Thống kê</h4>
-                    <p>👁️ 1,250 Lượt xem trang</p>
-                </div>
-            </aside>
-
-        </div>
-
-        <!-- 6. FOOTER: Phân vùng chân trang -->
-        <footer>
-            <p>&copy; 2026 CodeGym Việt Nam - Tất cả các quyền được bảo lưu.</p>
-            <p>Địa chỉ: Hà Nội - Đà Nẵng - TP. Hồ Chí Minh | Hotline: 1800 6325</p>
-        </footer>
-
-    </div>
-
+    <h1>Bố cục trang web với display</h1>
+    <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
+    <section>
+        <div class="box">Cột 1</div>
+        <div class="box">Cột 2</div>
+        <div class="box">Cột 3</div>
+    </section>
+    <footer>
+        <p>Bản quyền &copy; 2024</p>
+    </footer>
 </body>
-</html>s
+</html>
