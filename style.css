@@ -1,103 +1,83 @@
 /* --------------------------------------------------
- * 1. ELEMENT SELECTOR (Bộ chọn thẻ)
- * Đổi màu nền toàn bộ trang web
+ * 1. THIẾT LẬP MÀU NỀN CHO TRANG WEB (background-color)
  * -------------------------------------------------- */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f4f8; /* Màu nền xám xanh nhạt */
+    background-color: #e9ecef; /* Màu nền xám nhạt dịu mắt cho trang web */
     color: #333333;
     padding: 40px 20px;
     margin: 0;
     text-align: center;
 }
 
-/* --------------------------------------------------
- * 2. ID SELECTOR (Bộ chọn ID)
- * Căn giữa tiêu đề h1 và định dạng màu sắc
- * -------------------------------------------------- */
-#main-title {
+/* Định dạng tiêu đề chính h1 */
+h1 {
     color: #0d6efd;
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* --------------------------------------------------
- * 3. CLASS SELECTOR (Bộ chọn Lớp)
- * Định dạng đoạn văn mô tả bản thân
- * -------------------------------------------------- */
+/* Định dạng đoạn văn mô tả */
 .description {
     font-size: 16px;
     line-height: 1.6;
-    max-width: 650px;
+    max-width: 700px;
     margin: 0 auto 30px auto;
     color: #495057;
 }
 
 /* --------------------------------------------------
- * 4. GROUPING SELECTOR (Bộ chọn nhóm)
- * Định dạng thẻ h2 và khung chứa danh sách
+ * 2. KHỐI DIV CHỨA NỘI DUNG QUAN TRỌNG
+ * Thiết lập ảnh nền (background-image) và căn giữa nội dung
  * -------------------------------------------------- */
-.hobbies-container {
-    background-color: #ffffff;
-    max-width: 450px;
-    margin: 0 auto 30px auto;
-    padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+.important-box {
+    /* 
+     * Sử dụng đường dẫn ảnh local 'background.jpg' 
+     * (kèm lớp phủ màu chuyển xám/xanh gradient để chữ nổi bật) 
+     */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+    
+    /* Thiết lập cho ảnh nền phủ kín và không bị lặp lại */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* Căn giữa toàn bộ nội dung bên trong khối div */
+    text-align: center;
+
+    /* Định dạng kích thước, màu chữ và khoảng cách */
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-.hobbies-container h2 {
-    color: #198754;
+.important-box h2 {
+    font-size: 26px;
     margin-top: 0;
+    margin-bottom: 15px;
+    color: #ffffff;
 }
 
-.hobby-list {
-    list-style-type: square;
-    text-align: left;
-    padding-left: 20px;
+.important-box p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
 }
 
-/* --------------------------------------------------
- * 5. PSEUDO-CLASS SELECTOR (:nth-child)
- * Định dạng danh sách các mục với màu sắc khác nhau
- * -------------------------------------------------- */
-.hobby-list li:nth-child(1) {
-    color: #dc3545; /* Màu đỏ cho sở thích 1 */
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.hobby-list li:nth-child(2) {
-    color: #198754; /* Màu xanh lá cho sở thích 2 */
-    font-weight: bold;
-    margin-bottom: 8px;
-}
-
-.hobby-list li:nth-child(3) {
-    color: #6f42c1; /* Màu tím cho sở thích 3 */
-    font-weight: bold;
-}
-
-/* --------------------------------------------------
- * 6. PSEUDO-CLASS SELECTOR (:hover)
- * Định dạng nút bấm và hiệu ứng khi rê chuột
- * -------------------------------------------------- */
-.btn-primary {
+/* Nút bấm hành động bên trong khối div */
+.btn-action {
+    display: inline-block;
     background-color: #0d6efd;
     color: #ffffff;
-    border: none;
-    padding: 12px 28px;
-    font-size: 16px;
-    font-weight: bold;
+    padding: 12px 25px;
+    text-decoration: none;
     border-radius: 6px;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-/* Hiệu ứng Hover khi di chuột vào nút */
-.btn-primary:hover {
+.btn-action:hover {
     background-color: #0b5ed7;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
 }
