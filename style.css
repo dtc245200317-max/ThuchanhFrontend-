@@ -1,26 +1,103 @@
-/* Định dạng giao diện chung */
+/* --------------------------------------------------
+ * 1. ELEMENT SELECTOR (Bộ chọn thẻ)
+ * Đổi màu nền toàn bộ trang web
+ * -------------------------------------------------- */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8; /* Màu nền xám xanh nhạt */
     color: #333333;
-    padding: 20px;
-    line-height: 1.6;
+    padding: 40px 20px;
+    margin: 0;
+    text-align: center;
 }
 
-section {
-    background-color: #ffffff;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
-    padding: 20px;
+/* --------------------------------------------------
+ * 2. ID SELECTOR (Bộ chọn ID)
+ * Căn giữa tiêu đề h1 và định dạng màu sắc
+ * -------------------------------------------------- */
+#main-title {
+    color: #0d6efd;
+    text-align: center;
+    font-size: 32px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* PHẦN 3: External Style - Định kiểu cho Phần 3 */
-.external-heading {
-    color: #6f42c1; /* Màu tím */
+/* --------------------------------------------------
+ * 3. CLASS SELECTOR (Bộ chọn Lớp)
+ * Định dạng đoạn văn mô tả bản thân
+ * -------------------------------------------------- */
+.description {
+    font-size: 16px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    color: #495057;
 }
 
-.external-paragraph {
-    color: #dc3545; /* Màu đỏ */
+/* --------------------------------------------------
+ * 4. GROUPING SELECTOR (Bộ chọn nhóm)
+ * Định dạng thẻ h2 và khung chứa danh sách
+ * -------------------------------------------------- */
+.hobbies-container {
+    background-color: #ffffff;
+    max-width: 450px;
+    margin: 0 auto 30px auto;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.hobbies-container h2 {
+    color: #198754;
+    margin-top: 0;
+}
+
+.hobby-list {
+    list-style-type: square;
+    text-align: left;
+    padding-left: 20px;
+}
+
+/* --------------------------------------------------
+ * 5. PSEUDO-CLASS SELECTOR (:nth-child)
+ * Định dạng danh sách các mục với màu sắc khác nhau
+ * -------------------------------------------------- */
+.hobby-list li:nth-child(1) {
+    color: #dc3545; /* Màu đỏ cho sở thích 1 */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hobby-list li:nth-child(2) {
+    color: #198754; /* Màu xanh lá cho sở thích 2 */
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.hobby-list li:nth-child(3) {
+    color: #6f42c1; /* Màu tím cho sở thích 3 */
+    font-weight: bold;
+}
+
+/* --------------------------------------------------
+ * 6. PSEUDO-CLASS SELECTOR (:hover)
+ * Định dạng nút bấm và hiệu ứng khi rê chuột
+ * -------------------------------------------------- */
+.btn-primary {
+    background-color: #0d6efd;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng Hover khi di chuột vào nút */
+.btn-primary:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(13, 110, 253, 0.4);
 }
