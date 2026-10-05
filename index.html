@@ -3,39 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Layout - Bố Cục Trang Web Responsive</title>
+    <title>Bài Tập - Bố Cục Responsive bằng CSS Flexbox</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="container">
-        <!-- 1. Đầu trang -->
+    <div class="site-container">
+        <!-- 1. Đầu trang (Header) -->
         <header class="header">
-            <h1>Header - Tiêu Đề Trang Web</h1>
+            <h1>CỔNG THÔNG TIN CÔNG NGHỆ</h1>
+            <p>Trang tin tức & chia sẻ kiến thức Lập trình Web</p>
         </header>
 
-        <!-- 2. Thanh điều hướng -->
+        <!-- 2. Thanh điều hướng (Navigation) -->
         <nav class="nav">
-            Navigation - Thanh Điều Hướng
+            <ul class="nav-list">
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Tin tức</a></li>
+                <li><a href="#">Khóa học</a></li>
+                <li><a href="#">Dự án</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
         </nav>
 
-        <!-- 3. Khung chứa nội dung chính và cột phụ -->
+        <!-- 3. Khung nội dung chính (Main Content & Sidebar) -->
         <div class="main-container">
+            <!-- Nội dung chính -->
             <main class="content">
-                <h2>Main Content - Khu Vực Nội Dung Chính</h2>
-                <p>Đây là khu vực hiển thị bài viết, sản phẩm hoặc thông tin chính của trang web. Bố cục sử dụng <code>flex: 3</code> để tự động chiếm 75% tổng chiều rộng trên màn hình máy tính.</p>
+                <article class="article">
+                    <h2>Xây Dựng Bố Cục Responsive Với CSS Flexbox</h2>
+                    <p class="meta">Đăng ngày: 05/10/2026 | Tác giả: Admin</p>
+                    <p>CSS Flexbox (Flexible Box Layout) là một mô hình dàn trang một chiều giúp thiết kế giao diện linh hoạt và tối ưu trên nhiều kích thước màn hình khác nhau. Nhờ Flexbox, các phần tử có thể tự động co giãn, phân bổ khoảng trống và căn chỉnh vị trí linh hoạt.</p>
+                    <p>Trong bài tập này, chúng ta kết hợp các thuộc tính <code>flex-direction</code>, <code>flex-grow</code>, và <code>gap</code> để tạo ra bố cục trang web chuẩn gồm Header, Navigation, Content, Sidebar và Footer.</p>
+                </article>
             </main>
-            
+
+            <!-- Cột phụ (Sidebar) -->
             <aside class="sidebar">
-                <h3>Sidebar - Cột Phụ</h3>
-                <p>Khu vực chứa tin tức nổi bật, danh mục, liên kết phụ hoặc quảng cáo. Sử dụng <code>flex: 1</code> để chiếm 25% chiều rộng còn lại.</p>
+                <div class="widget">
+                    <h3>Tin Nổi Bật</h3>
+                    <ul>
+                        <li><a href="#">Hướng dẫn Học HTML5/CSS3 cơ bản</a></li>
+                        <li><a href="#">Tìm hiểu về Responsive Web Design</a></li>
+                        <li><a href="#">Các thuộc tính CSS Flexbox nâng cao</a></li>
+                    </ul>
+                </div>
+
+                <div class="widget">
+                    <h3>Quảng Cáo</h3>
+                    <div class="ad-box">Khóa Học Frontend Chuyên Nghiệp</div>
+                </div>
             </aside>
         </div>
 
-        <!-- 4. Chân trang -->
+        <!-- 4. Chân trang (Footer) -->
         <footer class="footer">
-            Footer - Thông Tin Bản Quyền & Bản Đồ Trang
+            <p>&copy; 2026 CodeGym Practice. Tất cả quyền được bảo lưu.</p>
+            <p>Email: contact@codegym.vn | Hotline: 1800 6868</p>
         </footer>
     </div>
 
