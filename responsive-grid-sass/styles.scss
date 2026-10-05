@@ -1,0 +1,103 @@
+$bg-f1: #f1f1f1;
+$bg-header: #9933cc;
+$bg-footer: #0099cc;
+$bg-white: #ffffff;
+$bg-menu: #33b5e5;
+$border-color: grey;
+$border-black: #000000;
+
+* {
+    box-sizing: border-box;
+}
+
+.main-overlay {
+    position: absolute;
+    opacity: 0.9;
+    width: auto;
+    left: 8px;
+    right: 10px;
+}
+
+.gridcontainer {
+    &.bg-container {
+        opacity: 0.1;
+    }
+}
+
+.gridwrapper {
+    overflow: auto;
+    position: relative;
+    height: 250px;
+    
+    &.header {
+        height: 90px;
+        .gridcontent {
+            width: 100%;
+            background: $bg-header;
+            border-right-color: transparent;
+        }
+    }
+    
+    &.body {
+        height: 230px;
+        .sidebar {
+            background-color: $bg-white;
+            border: none;
+            width: 25%;
+            padding-top: 15px;
+            
+            .menu-item {
+                background-color: $bg-menu;
+                border: none;
+                width: 100%;
+                
+                &.mb-10 {
+                    height: 15%;
+                    margin-bottom: 10px;
+                }
+                
+                &.no-mb {
+                    height: 15%;
+                }
+                
+                &.full-height {
+                    height: 92%;
+                }
+            }
+        }
+        .content {
+            background-color: $bg-white;
+            border: none;
+        }
+    }
+    
+    &.footer {
+        height: 50px;
+        .gridcontent {
+            width: 100%;
+            background: $bg-footer;
+            border-right-color: transparent;
+        }
+    }
+    
+    &.bg-grid {
+        height: 370px;
+        .gridcontent {
+            background-color: $bg-white;
+            border-right: 1px solid $border-black;
+            
+            &:first-child {
+                border-left: 1px solid $border-black;
+            }
+        }
+    }
+}
+
+.gridcontent {
+    width: 8.33%;
+    margin: 0;
+    border-right: 1px solid $border-color;
+    height: 100%;
+    float: left;
+    background-color: $bg-f1;
+}
