@@ -2,17 +2,36 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <title>Bố cục với Float và Overflow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navbar</title>
+    <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
+    <!-- Liên kết tệp JavaScript (thêm thuộc tính defer để tải script sau khi HTML nạp xong) -->
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <h1>Bố cục trang với float và overflow</h1>
-    <div class="container">
-        <div class="left-column">Nội dung bên trái</div>
-        <div class="right-column">Nội dung bên phải</div>
-    </div>
-    <div class="overflow-box">
-        Đây là nội dung rất dài mà chúng ta kiểm tra overflow. Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-    </div>
+
+    <!-- Thanh điều hướng chính -->
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        
+        <!-- Danh sách menu liên kết -->
+        <ul class="nav-links">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Dịch vụ</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+
+        <!-- Biểu tượng hamburger menu (Chỉ hiển thị trên thiết bị di động) -->
+        <div class="menu-icon">&#9776;</div>
+    </nav>
+
+    <!-- Khung nội dung giả định để kiểm tra giao diện -->
+    <main style="padding: 40px; text-align: center;">
+        <h2>Chào mừng bạn đến với trang web của tôi</h2>
+        <p>Hãy thử co giãn kích thước màn hình trình duyệt hoặc kiểm tra trên thiết bị di động để trải nghiệm tính năng Responsive Navbar.</p>
+    </main>
+
 </body>
 </html>
