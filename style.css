@@ -1,4 +1,3 @@
-/* Reset CSS cơ bản và thiết lập box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -8,80 +7,36 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
-    color: #333333;
-    padding: 20px;
+    padding: 30px;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #1b365d;
-}
-
-/* Khung chứa các ô ảnh (Flexbox) */
-.gallery-container {
-    display: flex;
-    flex-wrap: wrap;
-    margin: -8px; /* Triệt tiêu bớt padding dư thừa ở mép ngoài */
-}
-
-/* 1. MẶC ĐỊNH CHO MÀN HÌNH LỚN (> 700px): Hiển thị 4 ảnh / 1 dòng */
-.gallery-item {
-    width: 25%; /* 100% / 4 = 25% */
-    padding: 8px;
-}
-
-/* Trang trí phần thẻ chứa ảnh */
-.card {
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
+    grid-template-rows: repeat(3, 100px);   /* 3 hàng, mỗi hàng cao 100px */
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto;
     background-color: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
-}
-
-.card img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.desc {
-    padding: 12px;
-    text-align: center;
-    font-size: 14px;
-    color: #4a5568;
-    background-color: #ffffff;
-}
-
-/* -------------------------------------------------- */
-/* MEDIA QUERIES ĐIỀU CHỈNH RESPONSIVE BỘ SƯU TẬP     */
-/* -------------------------------------------------- */
-
-/* 2. MÀN HÌNH NHỎ HƠN HOẶC BẰNG 700px: Hiển thị 2 ảnh / 1 dòng */
-@media screen and (max-width: 700px) {
-    .gallery-item {
-        width: 50%; /* 100% / 2 = 50% */
-    }
-}
-
-/* 3. MÀN HÌNH NHỎ HƠN HOẶC BẰNG 500px: Hiển thị 1 ảnh / 1 dòng */
-@media screen and (max-width: 500px) {
-    .gallery-item {
-        width: 100%; /* 100% / 1 = 100% */
-    }
-}
-
-footer {
-    text-align: center;
-    margin-top: 40px;
     padding: 15px;
-    font-size: 13px;
-    color: #718096;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.item {
+    background-color: lightblue;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ô 1: Đổi màu cam để dễ quan sát vị trí thay đổi */
+.item1 {
+    grid-row: 1 / 3; /* Thay đổi giá trị này ở các bước kiểm tra */
+    background-color: #f39c12;
+    color: #ffffff;
 }
