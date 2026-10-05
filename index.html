@@ -2,56 +2,78 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <!-- Meta viewport bắt buộc để kích hoạt chế độ Responsive trên các thiết bị di động -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục trang web Responsive (RWD)</title>
+    <title>Responsive Image Gallery</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. Đầu trang (Header) -->
-    <header class="header">
-        <h1>HEADER</h1>
-    </header>
+    <h1 class="title">Bộ Sưu Tập Ảnh Responsive (RWD Gallery)</h1>
 
-    <!-- 2. Thanh điều hướng (Navigation Bar) -->
-    <nav class="navbar">
-        <a href="#">Trang chủ</a>
-        <a href="#">Giới thiệu</a>
-        <a href="#">Sản phẩm</a>
-        <a href="#">Dịch vụ</a>
-        <a href="#">Liên hệ</a>
-    </nav>
+    <!-- Khung chứa bộ sưu tập ảnh -->
+    <div class="gallery-container">
 
-    <!-- 3. Khu vực nội dung chính (3 Cột) -->
-    <main class="content-wrapper">
-        <!-- Cột trái (Sidebar 1) -->
-        <aside class="col sidebar-left">
-            <h3>Menu Phụ</h3>
-            <ul>
-                <li><a href="#">Danh mục 1</a></li>
-                <li><a href="#">Danh mục 2</a></li>
-                <li><a href="#">Danh mục 3</a></li>
-            </ul>
-        </aside>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1015/600/400" alt="Phong cảnh thiên nhiên">
+                <div class="desc">Thiên nhiên tươi đẹp</div>
+            </div>
+        </div>
 
-        <!-- Cột giữa (Nội dung chính) -->
-        <section class="col main-content">
-            <h2>Nội Dung Chính</h2>
-            <p>Trang web này sử dụng kỹ thuật Responsive Web Design (RWD) linh hoạt giúp giao diện tự động co giãn và chuyển đổi bố cục tương thích hoàn hảo trên các màn hình Máy tính (Desktop), Máy tính bảng (Tablet) và Điện thoại di động (Mobile).</p>
-        </section>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1018/600/400" alt="Dãy núi hùng vĩ">
+                <div class="desc">Dãy núi hùng vĩ</div>
+            </div>
+        </div>
 
-        <!-- Cột phải (Sidebar 2) -->
-        <aside class="col sidebar-right">
-            <h3>Tin Tức / Quảng Cáo</h3>
-            <p>Thông tin khuyến mãi hoặc các liên kết bổ sung cho trang web.</p>
-        </aside>
-    </main>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1025/600/400" alt="Động vật hoang dã">
+                <div class="desc">Động vật hoang dã</div>
+            </div>
+        </div>
 
-    <!-- 4. Chân trang (Footer) -->
-    <footer class="footer">
-        <p>&copy; 2026 CodeGym Việt Nam - Responsive Web Design Layout</p>
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1039/600/400" alt="Thành phố hiện đại">
+                <div class="desc">Thành phố về đêm</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1043/600/400" alt="Bờ biển trong xanh">
+                <div class="desc">Bờ biển trong xanh</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1050/600/400" alt="Cánh đồng bao la">
+                <div class="desc">Cánh đồng mùa thu</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1069/600/400" alt="Rừng cây xanh mát">
+                <div class="desc">Rừng cây nhiệt đới</div>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <div class="card">
+                <img src="https://picsum.photos/id/1084/600/400" alt="Sinh vật biển">
+                <div class="desc">Khám phá đại dương</div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 CodeGym Việt Nam - Responsive Image Gallery Exercise</p>
     </footer>
 
 </body>

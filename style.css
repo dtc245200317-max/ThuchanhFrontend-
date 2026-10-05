@@ -1,4 +1,4 @@
-/* Reset CSS và cấu hình box-sizing */
+/* Reset CSS cơ bản và thiết lập box-sizing */
 * {
     margin: 0;
     padding: 0;
@@ -7,123 +7,81 @@
 
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f4f6f9;
     color: #333333;
-}
-
-/* 1. Định dạng Header */
-.header {
-    background-color: #2c3e50;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-/* 2. Định dạng Navbar */
-.navbar {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #34495e;
-    justify-content: center;
-}
-
-.navbar a {
-    color: #ffffff;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-    transition: background-color 0.3s;
-}
-
-.navbar a:hover {
-    background-color: #1abc9c;
-}
-
-/* 3. Bố cục Nội dung chính (Kỹ thuật Flexbox) */
-.content-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 10px;
-    gap: 15px;
-}
-
-/* Định dạng chung cho các cột */
-.col {
-    background-color: #ffffff;
     padding: 20px;
-    border-radius: 6px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
-/* Cấu hình kích thước Desktop (3 Cột) */
-.sidebar-left {
-    flex: 1 1 200px; /* Độ rộng tối thiểu 200px */
-}
-
-.main-content {
-    flex: 3 1 400px; /* Chiếm phần lớn diện tích chính */
-}
-
-.sidebar-right {
-    flex: 1 1 200px;
-}
-
-.sidebar-left ul {
-    list-style: none;
-    margin-top: 10px;
-}
-
-.sidebar-left ul li a {
-    text-decoration: none;
-    color: #2980b9;
-    display: block;
-    padding: 6px 0;
-}
-
-/* 4. Định dạng Footer */
-.footer {
-    background-color: #2c3e50;
-    color: #ffffff;
+.title {
     text-align: center;
+    margin-bottom: 30px;
+    color: #1b365d;
+}
+
+/* Khung chứa các ô ảnh (Flexbox) */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -8px; /* Triệt tiêu bớt padding dư thừa ở mép ngoài */
+}
+
+/* 1. MẶC ĐỊNH CHO MÀN HÌNH LỚN (> 700px): Hiển thị 4 ảnh / 1 dòng */
+.gallery-item {
+    width: 25%; /* 100% / 4 = 25% */
+    padding: 8px;
+}
+
+/* Trang trí phần thẻ chứa ảnh */
+.card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.desc {
+    padding: 12px;
+    text-align: center;
+    font-size: 14px;
+    color: #4a5568;
+    background-color: #ffffff;
+}
+
+/* -------------------------------------------------- */
+/* MEDIA QUERIES ĐIỀU CHỈNH RESPONSIVE BỘ SƯU TẬP     */
+/* -------------------------------------------------- */
+
+/* 2. MÀN HÌNH NHỎ HƠN HOẶC BẰNG 700px: Hiển thị 2 ảnh / 1 dòng */
+@media screen and (max-width: 700px) {
+    .gallery-item {
+        width: 50%; /* 100% / 2 = 50% */
+    }
+}
+
+/* 3. MÀN HÌNH NHỎ HƠN HOẶC BẰNG 500px: Hiển thị 1 ảnh / 1 dòng */
+@media screen and (max-width: 500px) {
+    .gallery-item {
+        width: 100%; /* 100% / 1 = 100% */
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
     padding: 15px;
-    margin-top: 20px;
-}
-
-/* -------------------------------------------------- */
-/* MEDIA QUERIES FOR RESPONSIVE DESIGN (RWD)           */
-/* -------------------------------------------------- */
-
-/* Tablet: Màn hình nhỏ hơn 992px */
-@media screen and (max-width: 992px) {
-    .content-wrapper {
-        gap: 10px;
-    }
-
-    .sidebar-left,
-    .sidebar-right {
-        flex: 1 1 45%; /* Hai cột phụ chia đôi */
-    }
-
-    .main-content {
-        flex: 1 1 100%; /* Nội dung chính chiếm full 1 hàng */
-        order: -1;     /* Đưa nội dung chính lên đầu tiên */
-    }
-}
-
-/* Mobile: Màn hình nhỏ hơn 600px */
-@media screen and (max-width: 600px) {
-    .navbar {
-        flex-direction: column;
-    }
-
-    .col {
-        flex: 1 1 100%; /* Đổi toàn bộ các cột thành 1 cột duy nhất */
-    }
-
-    .header {
-        padding: 20px 10px;
-    }
+    font-size: 13px;
+    color: #718096;
 }
