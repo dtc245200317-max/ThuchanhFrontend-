@@ -2,46 +2,57 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
+    <!-- Meta viewport bắt buộc để kích hoạt chế độ Responsive trên các thiết bị di động -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Responsive</title>
+    <title>Bố cục trang web Responsive (RWD)</title>
+    <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <!-- 1. Đầu trang (Header) -->
     <header class="header">
-        <div class="logo">MyBrand</div>
-        <nav class="nav">
-            <ul>
-                <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Dịch vụ</a></li>
-                <li><a href="#">Đánh giá</a></li>
-                <li><a href="#">Liên hệ</a></li>
-            </ul>
-        </nav>
+        <h1>HEADER</h1>
     </header>
 
-    <section class="hero">
-        <h1>Chào mừng đến với MyBrand</h1>
-        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
-        <a href="#services" class="btn">Tìm hiểu thêm</a>
-    </section>
+    <!-- 2. Thanh điều hướng (Navigation Bar) -->
+    <nav class="navbar">
+        <a href="#">Trang chủ</a>
+        <a href="#">Giới thiệu</a>
+        <a href="#">Sản phẩm</a>
+        <a href="#">Dịch vụ</a>
+        <a href="#">Liên hệ</a>
+    </nav>
 
-    <section id="services" class="services">
-        <h2>Dịch vụ của chúng tôi</h2>
-        <div class="service-container">
-            <div class="service">Thiết kế web</div>
-            <div class="service">Phát triển phần mềm</div>
-            <div class="service">Marketing số</div>
-        </div>
-    </section>
+    <!-- 3. Khu vực nội dung chính (3 Cột) -->
+    <main class="content-wrapper">
+        <!-- Cột trái (Sidebar 1) -->
+        <aside class="col sidebar-left">
+            <h3>Menu Phụ</h3>
+            <ul>
+                <li><a href="#">Danh mục 1</a></li>
+                <li><a href="#">Danh mục 2</a></li>
+                <li><a href="#">Danh mục 3</a></li>
+            </ul>
+        </aside>
 
-    <section class="testimonials">
-        <h2>Khách hàng nói gì?</h2>
-        <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
-        <div class="testimonial">"Tôi rất hài lòng với MyBrand." - Khách hàng B</div>
-    </section>
+        <!-- Cột giữa (Nội dung chính) -->
+        <section class="col main-content">
+            <h2>Nội Dung Chính</h2>
+            <p>Trang web này sử dụng kỹ thuật Responsive Web Design (RWD) linh hoạt giúp giao diện tự động co giãn và chuyển đổi bố cục tương thích hoàn hảo trên các màn hình Máy tính (Desktop), Máy tính bảng (Tablet) và Điện thoại di động (Mobile).</p>
+        </section>
 
+        <!-- Cột phải (Sidebar 2) -->
+        <aside class="col sidebar-right">
+            <h3>Tin Tức / Quảng Cáo</h3>
+            <p>Thông tin khuyến mãi hoặc các liên kết bổ sung cho trang web.</p>
+        </aside>
+    </main>
+
+    <!-- 4. Chân trang (Footer) -->
     <footer class="footer">
-        <p>&copy; 2024 MyBrand. All rights reserved.</p>
+        <p>&copy; 2026 CodeGym Việt Nam - Responsive Web Design Layout</p>
     </footer>
+
 </body>
 </html>
