@@ -3,249 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iPhone 16 Pro - Thiết Kế Đột Phá | Trang Giới Thiệu Sản Phẩm</title>
-
-    <!-- Bootstrap 5.3.3 CSS CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font Awesome 6.5.2 CDN -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Simple Web Development Template</title>
 
     <style>
-        /* CSS tối thiểu để tối ưu hình ảnh và hiệu ứng mượt mà */
-        .hero-img {
-            max-height: 480px;
-            object-fit: contain;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        .feature-card {
-            transition: transform 0.3s ease, shadow 0.3s ease;
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            padding: 10px 20px;
+            z-index: 1000;
         }
-        .feature-card:hover {
-            transform: translateY(-5px);
+
+        .background {
+            background: black;
+            background-blend-mode: darken;
+            background-size: cover;
+        }
+
+        .nav-list {
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 180px;
+            border-radius: 50px;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 26px 30px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .nav-list li a:hover {
+            color: grey;
+        }
+
+        .rightNav {
+            width: 30%;
+            text-align: right;
+        }
+
+        #search {
+            padding: 5px;
+            font-size: 17px;
+            border: 2px solid grey;
+            border-radius: 9px;
+            outline: none;
+        }
+
+        .firstsection {
+            background-color: #2e7d32;
+            height: 400px;
+        }
+
+        .secondsection {
+            background-color: #1565c0;
+            height: 400px;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            max-width: 80%;
+            margin: auto;
+            height: 100%;
+        }
+
+        .firstHalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .secondHalf {
+            width: 100%;
+        }
+
+        .secondHalf img {
+            width: 70%;
+            border: 4px solid white;
+            border-radius: 150px;
+            display: block;
+            margin: auto;
+        }
+
+        .text-big {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .text-small {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            margin: 7px 0;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .btn-sm {
+            padding: 6px 10px;
+            vertical-align: middle;
+        }
+
+        .section {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 90%;
+            margin: auto;
+        }
+
+        .section-left {
+            flex-direction: row-reverse;
+        }
+
+        .paras {
+            padding: 0px 65px;
+        }
+
+        .thumbnail img {
+            width: 250px;
+            border: 2px solid black;
+            border-radius: 26px;
+            margin-top: 19px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .text-footer {
+            text-align: center;
+            padding: 30px 0;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
         }
     </style>
 </head>
-<body class="bg-black text-white">
+<body>
 
-    <!-- 1. NAVIGATION BAR (NAVBAR) -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-opacity-75 sticky-top backdrop-blur border-bottom border-secondary">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="#">
-                <i class="fab fa-apple fa-lg text-white"></i>
-                <span>iPhone 16 Pro</span>
-            </a>
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav d-flex align-items-lg-center gap-lg-3">
-                    <li class="nav-item"><a class="nav-link active" href="#overview">Tổng quan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Tính năng</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#specs">Thông số</a></li>
-                    <li class="nav-item">
-                        <a href="#buy" class="btn btn-primary rounded-pill px-4 btn-sm fw-semibold ms-lg-2">
-                            Mua ngay
-                        </a>
-                    </li>
-                </ul>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo">
+                <img src="https://via.placeholder.com/180x60?text=Logo" alt="Logo">
             </div>
+            <li><a href="#web">Web Technology</a></li>
+            <li><a href="#program">C Programming</a></li>
+            <li><a href="#course">Java</a></li>
+        </ul>
+
+        <div class="rightNav">
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <button class="btn btn-sm">Search</button>
         </div>
     </nav>
 
-    <!-- 2. HERO SECTION (GIỚI THIỆU CHÍNH - FLEXBOX & MARGIN/PADDING) -->
-    <section id="overview" class="py-5 text-center bg-gradient">
-        <div class="container py-md-5">
-            <p class="text-warning fw-semibold mb-2 text-uppercase tracking-wider">Mới Ra Mắt</p>
-            <h1 class="display-3 fw-bold mb-3">iPhone 16 Pro</h1>
-            <p class="lead text-secondary max-w-600 mx-auto mb-4">
-                Thiết kế Titan cấp hàng không vũ trụ. Chip A18 Pro mạnh mẽ đỉnh cao. Nút Điều Khiển Camera hoàn toàn mới.
+    <!-- SECTION 1: WEB TECHNOLOGY -->
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">
+                    Web Technology
+                </h1>
+                <p class="text-small">
+                    HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. 
+                    HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. 
+                    A markup language is used to define the text document within tag which defines the structure of web pages. 
+                    HTML is a markup language that is used by the browser to manipulate text, images, and other content to display it in the required format.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: C PROGRAMMING -->
+    <section class="secondsection">
+        <div class="box-main">
+            <div class="secondHalf">
+                <h1 class="text-big" id="program">
+                    C Programming
+                </h1>
+                <p class="text-small">
+                    C is a procedural programming language. It was initially developed by Dennis Ritchie as a system programming language to write operating system. 
+                    The main features of C language include low-level access to memory, simple set of keywords, and clean style, these features make C language suitable for system programming like operating system or compiler development.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: JAVA WITH THUMBNAIL -->
+    <section class="section" id="course">
+        <div class="paras">
+            <h1 class="sectionTag text-big">Java</h1>
+            <p class="sectionSubTag text-small">
+                Java has been one of the most popular programming language for many years. Java is Object Oriented. 
+                However it is not considered as pure object oriented as it provides support for primitive data types (like int, char, etc). 
+                The Java codes are first compiled into byte code (machine independent code). Then the byte code is run on Java Virtual Machine (JVM) regardless of the underlying architecture.
             </p>
-            
-            <!-- Flexbox căn giữa các nút bấm CTA -->
-            <div class="d-flex justify-content-center align-items-center gap-3 mb-5">
-                <a href="#buy" class="btn btn-primary btn-lg rounded-pill px-4 fw-bold">
-                    <i class="fas fa-shopping-bag me-2"></i>Đặt Mua Ngay
-                </a>
-                <a href="#features" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold">
-                    Khám phá thêm <i class="fas fa-chevron-right ms-1 fa-sm"></i>
-                </a>
-            </div>
+        </div>
 
-            <!-- Hình ảnh sản phẩm trung tâm -->
-            <div class="d-flex justify-content-center align-items-center my-4">
-                <img src="https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=1000&q=80" 
-                     alt="iPhone 16 Pro Showcase" 
-                     class="img-fluid rounded-4 shadow-lg hero-img">
-            </div>
+        <div class="thumbnail">
+            <img src="https://via.placeholder.com/250x180?text=Java+Laptop" alt="laptop image">
         </div>
     </section>
 
-    <!-- 3. HIGHLIGHT METRICS SECTION (FLEXBOX & DISPLAY UTILITIES) -->
-    <section class="bg-dark py-4 border-top border-bottom border-secondary">
-        <div class="container">
-            <!-- Grid 4 cột hiển thị thông số nhanh -->
-            <div class="row g-4 text-center">
-                <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-3">
-                    <i class="fas fa-microchip fa-2x text-primary mb-2"></i>
-                    <h4 class="fw-bold m-0">A18 Pro</h4>
-                    <small class="text-secondary">Chip 3nm Nhanh Nhất</small>
-                </div>
-                <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-3">
-                    <i class="fas fa-camera fa-2x text-primary mb-2"></i>
-                    <h4 class="fw-bold m-0">48 MP</h4>
-                    <small class="text-secondary">Camera Fusion Siêu Rõ</small>
-                </div>
-                <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-3">
-                    <i class="fas fa-battery-full fa-2x text-primary mb-2"></i>
-                    <h4 class="fw-bold m-0">29 Giờ</h4>
-                    <small class="text-secondary">Xem Video Liên Tục</small>
-                </div>
-                <div class="col-6 col-md-3 d-flex flex-column justify-content-center align-items-center p-3">
-                    <i class="fas fa-shield-halved fa-2x text-primary mb-2"></i>
-                    <h4 class="fw-bold m-0">Titan 5</h4>
-                    <small class="text-secondary">Khung Vỏ Siêu Bền</small>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. FEATURE GRID SECTION (BOOTSTRAP GRID & FLEXBOX) -->
-    <section id="features" class="py-5">
-        <div class="container py-4">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold mb-3">Tính Năng Nổi Bật</h2>
-                <p class="text-secondary">Công nghệ tiên phong nâng tầm trải nghiệm di động của bạn</p>
-            </div>
-
-            <div class="row g-4">
-                <!-- Card 1: Camera -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card bg-dark text-white border-secondary h-100 p-4 rounded-4 feature-card d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <span class="bg-primary bg-opacity-25 text-primary p-3 rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-aperture fa-lg"></i>
-                                </span>
-                                <h4 class="fw-bold m-0">Nút Điều Khiển Camera</h4>
-                            </div>
-                            <p class="text-secondary">
-                                Dễ dàng truy cập nhanh các công cụ chụp ảnh như zoom, độ sâu trường ảnh và quay video 4K 120 fps Dolby Vision chỉ với một cú chạm.
-                            </p>
-                        </div>
-                        <div class="pt-3 border-top border-secondary text-primary font-monospace small">
-                            <i class="fas fa-check-circle me-1"></i> Chụp ảnh chuyên nghiệp
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Thiết kế Titan -->
-                <div class="col-md-6 col-lg-4">
-                    <div class="card bg-dark text-white border-secondary h-100 p-4 rounded-4 feature-card d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <span class="bg-warning bg-opacity-25 text-warning p-3 rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-gem fa-lg"></i>
-                                </span>
-                                <h4 class="fw-bold m-0">Khung Titan Đẳng Cấp</h4>
-                            </div>
-                            <p class="text-secondary">
-                                Thiết kế Titan Cấp 5 bền bỉ và nhẹ nhất từ trước đến nay, kết hợp cùng viền màn hình mỏng nhất từng có trên các sản phẩm Apple.
-                            </p>
-                        </div>
-                        <div class="pt-3 border-top border-secondary text-warning font-monospace small">
-                            <i class="fas fa-check-circle me-1"></i> Bền bỉ & Siêu nhẹ
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 3: Apple Intelligence -->
-                <div class="col-md-12 col-lg-4">
-                    <div class="card bg-dark text-white border-secondary h-100 p-4 rounded-4 feature-card d-flex flex-column justify-content-between">
-                        <div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <span class="bg-info bg-opacity-25 text-info p-3 rounded-circle d-flex justify-content-center align-items-center" style="width: 50px; height: 50px;">
-                                    <i class="fas fa-brain fa-lg"></i>
-                                </span>
-                                <h4 class="fw-bold m-0">Apple Intelligence</h4>
-                            </div>
-                            <p class="text-secondary">
-                                Trí tuệ nhân tạo cá nhân giúp bạn viết lách, sáng tạo hình ảnh và hoàn thành công việc dễ dàng trong khi vẫn bảo mật dữ liệu tuyệt đối.
-                            </p>
-                        </div>
-                        <div class="pt-3 border-top border-secondary text-info font-monospace small">
-                            <i class="fas fa-check-circle me-1"></i> AI thế hệ mới
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. TECHNICAL SPECIFICATIONS (ALIGN-ITEMS & MARGIN/PADDING) -->
-    <section id="specs" class="py-5 bg-dark border-top border-secondary">
-        <div class="container py-4">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <h2 class="display-6 fw-bold mb-4">Màn Hình Super Retina XDR Khủng</h2>
-                    <p class="text-secondary mb-4">
-                        Tần số quét ProMotion 120Hz mang đến trải nghiệm cuộn lướt siêu mượt. Màn hình Always-On giúp bạn không bỏ lỡ bất kỳ thông báo quan trọng nào.
-                    </p>
-                    <ul class="list-unstyled d-flex flex-column gap-3">
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="fas fa-mobile-screen fa-lg text-primary"></i>
-                            <span>Kích thước 6.3 inch (Pro) và 6.9 inch (Pro Max)</span>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="fas fa-sun fa-lg text-primary"></i>
-                            <span>Độ sáng đỉnh lên đến 2.000 nits ngoài trời</span>
-                        </li>
-                        <li class="d-flex align-items-center gap-3">
-                            <i class="fas fa-bolt fa-lg text-primary"></i>
-                            <span>Lớp kính Ceramic Shield thế hệ mới nhất</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 text-center">
-                    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80" 
-                         alt="iPhone Display Tech" 
-                         class="img-fluid rounded-4 shadow border border-secondary">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 6. BUY & CALL TO ACTION SECTION -->
-    <section id="buy" class="py-5 text-center">
-        <div class="container py-5">
-            <div class="bg-gradient p-5 rounded-5 border border-secondary shadow-lg">
-                <i class="fab fa-apple fa-3x text-white mb-3"></i>
-                <h2 class="display-5 fw-bold mb-3">Sẵn Sàng Sở Hữu iPhone 16 Pro?</h2>
-                <p class="lead text-secondary mb-4">Giá chỉ từ 28.999.000đ hoặc 1.199.000đ/tháng trả góp 0%</p>
-                <div class="d-flex justify-content-center align-items-center gap-3 flex-wrap">
-                    <button class="btn btn-primary btn-lg rounded-pill px-5 fw-bold">
-                        <i class="fas fa-cart-shopping me-2"></i>Đặt Hàng Ngay
-                    </button>
-                    <button class="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold">
-                        <i class="fas fa-store me-2"></i>Tìm Cửa Hàng
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 7. FOOTER -->
-    <footer class="bg-dark text-secondary py-4 border-top border-secondary">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
-            <p class="m-0 small">&copy; 2026 Apple Inc. Tất cả quyền được bảo lưu.</p>
-            <div class="d-flex gap-4">
-                <a href="#" class="text-secondary text-decoration-none small hover-white">Chính sách bảo mật</a>
-                <a href="#" class="text-secondary text-decoration-none small hover-white">Điều khoản sử dụng</a>
-                <a href="#" class="text-secondary text-decoration-none small hover-white">Bán hàng & Hoàn tiền</a>
-            </div>
-        </div>
+    <!-- FOOTER -->
+    <footer class="background">
+        <p class="text-footer">
+            Copyright ©-All rights are reserved
+        </p>
     </footer>
 
-    <!-- Bootstrap 5.3.3 JavaScript Bundle CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
