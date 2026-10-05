@@ -1,0 +1,211 @@
+/* VARIABLES */
+$bg-body: #f4f6f9;
+$text-main: #333;
+$text-secondary: #94a3b8;
+$text-slate: #475569;
+$header-bg: #1e293b;
+$nav-bg: #0f172a;
+$primary-color: #3b82f6;
+$white: #ffffff;
+$border-color: #e2e8f0;
+$font-stack: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+/* MIXINS */
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin card-style {
+    background-color: $white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid $border-color;
+}
+
+/* RESET MẶC ĐỊNH */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+body {
+    background-color: $bg-body;
+    color: $text-main;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* 1. HEADER */
+.header {
+    background-color: $header-bg;
+    color: $white;
+    padding: 25px 0;
+    border-bottom: 3px solid $primary-color;
+
+    &-container {
+        @include flex-between;
+    }
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    span {
+        color: $primary-color;
+    }
+}
+
+.tagline {
+    font-size: 0.95rem;
+    color: $text-secondary;
+}
+
+/* 2. NAVIGATION MENU */
+.navbar {
+    background-color: $nav-bg;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+
+    li {
+        a {
+            display: block;
+            padding: 14px 20px;
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+
+            &:hover,
+            &.active {
+                color: $white;
+                background-color: $primary-color;
+            }
+        }
+    }
+}
+
+/* 3. CONTENT SECTION (LAYOUT 2 CỘT FLEXBOX) */
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+/* Cột nội dung chính */
+.main-content {
+    flex: 7;
+    @include flex-column;
+    gap: 25px;
+
+    .card {
+        @include card-style;
+        overflow: hidden;
+
+        img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        &-body {
+            padding: 20px;
+
+            h2 {
+                font-size: 1.3rem;
+                color: $nav-bg;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: $text-slate;
+                font-size: 0.95rem;
+            }
+        }
+    }
+}
+
+/* Sidebar */
+.sidebar {
+    flex: 3;
+    @include flex-column;
+    gap: 20px;
+
+    .widget {
+        @include card-style;
+        padding: 20px;
+
+        h3 {
+            font-size: 1.1rem;
+            color: $nav-bg;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid $border-color;
+        }
+
+        &-list {
+            list-style: none;
+
+            li {
+                padding: 6px 0;
+                color: $text-slate;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}
+
+/* 4. FOOTER */
+.footer {
+    background-color: $nav-bg;
+    color: $text-secondary;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+
+    &-container {
+        @include flex-between;
+        gap: 10px;
+    }
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+
+    .header-container,
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        justify-content: center;
+    }
+}
