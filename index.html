@@ -3,259 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simple Web Development Template</title>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: sticky;
-            top: 0;
-            cursor: pointer;
-            padding: 10px 20px;
-            z-index: 1000;
-        }
-
-        .background {
-            background: black;
-            background-blend-mode: darken;
-            background-size: cover;
-        }
-
-        .nav-list {
-            width: 70%;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 180px;
-            border-radius: 50px;
-        }
-
-        .nav-list li {
-            list-style: none;
-            padding: 26px 30px;
-        }
-
-        .nav-list li a {
-            text-decoration: none;
-            color: white;
-            font-weight: 500;
-        }
-
-        .nav-list li a:hover {
-            color: grey;
-        }
-
-        .rightNav {
-            width: 30%;
-            text-align: right;
-        }
-
-        #search {
-            padding: 5px;
-            font-size: 17px;
-            border: 2px solid grey;
-            border-radius: 9px;
-            outline: none;
-        }
-
-        .firstsection {
-            background-color: #2e7d32;
-            height: 400px;
-        }
-
-        .secondsection {
-            background-color: #1565c0;
-            height: 400px;
-        }
-
-        .box-main {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            max-width: 80%;
-            margin: auto;
-            height: 100%;
-        }
-
-        .firstHalf {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .secondHalf {
-            width: 100%;
-        }
-
-        .secondHalf img {
-            width: 70%;
-            border: 4px solid white;
-            border-radius: 150px;
-            display: block;
-            margin: auto;
-        }
-
-        .text-big {
-            font-family: 'Piazzolla', serif;
-            font-weight: bold;
-            font-size: 35px;
-            margin-bottom: 15px;
-        }
-
-        .text-small {
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-        .btn {
-            padding: 8px 20px;
-            margin: 7px 0;
-            border: 2px solid white;
-            border-radius: 8px;
-            background: none;
-            color: white;
-            cursor: pointer;
-            transition: 0.3s ease;
-        }
-
-        .btn:hover {
-            background-color: white;
-            color: black;
-        }
-
-        .btn-sm {
-            padding: 6px 10px;
-            vertical-align: middle;
-        }
-
-        .section {
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            max-width: 90%;
-            margin: auto;
-        }
-
-        .section-left {
-            flex-direction: row-reverse;
-        }
-
-        .paras {
-            padding: 0px 65px;
-        }
-
-        .thumbnail img {
-            width: 250px;
-            border: 2px solid black;
-            border-radius: 26px;
-            margin-top: 19px;
-        }
-
-        .center {
-            text-align: center;
-        }
-
-        .text-footer {
-            text-align: center;
-            padding: 30px 0;
-            font-family: 'Ubuntu', sans-serif;
-            display: flex;
-            justify-content: center;
-            color: white;
-        }
-    </style>
+    <title>Creative Web Design</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar background">
-        <ul class="nav-list">
-            <div class="logo">
-                <img src="https://via.placeholder.com/180x60?text=Logo" alt="Logo">
-            </div>
-            <li><a href="#web">Web Technology</a></li>
-            <li><a href="#program">C Programming</a></li>
-            <li><a href="#course">Java</a></li>
+    <!-- Thanh điều hướng cố định (Fixed Navbar) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#services">Dịch vụ</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Liên hệ</a></li>
         </ul>
-
-        <div class="rightNav">
-            <input type="text" name="search" id="search" placeholder="Search...">
-            <button class="btn btn-sm">Search</button>
-        </div>
     </nav>
 
-    <!-- SECTION 1: WEB TECHNOLOGY -->
-    <section class="firstsection">
-        <div class="box-main">
-            <div class="firstHalf">
-                <h1 class="text-big" id="web">
-                    Web Technology
-                </h1>
-                <p class="text-small">
-                    HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. 
-                    HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. 
-                    A markup language is used to define the text document within tag which defines the structure of web pages. 
-                    HTML is a markup language that is used by the browser to manipulate text, images, and other content to display it in the required format.
-                </p>
+    <!-- Header với nền ảnh và hiệu ứng blur -->
+    <header class="header">
+        <div class="header-content">
+            <h1>Creative Web Design</h1>
+            <p>Thiết kế website chuyên nghiệp - Hiện đại - Ấn tượng</p>
+            <a href="#services" class="btn">Khám phá ngay</a>
+        </div>
+    </header>
+
+    <!-- Content Section với Card Layout (CSS Grid) -->
+    <section class="content" id="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="card-container">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Thiết kế Website">
+                <h3>Thiết kế Website</h3>
+                <p>• Chúng tôi tạo ra những trang web chuyên nghiệp, thân thiện với người dùng.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&w=600&q=80" alt="SEO & Marketing">
+                <h3>SEO & Marketing</h3>
+                <p>• Giúp website của bạn đạt thứ hạng cao trên công cụ tìm kiếm.</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534536281715-e28d7675778f?auto=format&fit=crop&w=600&q=80" alt="Hỗ trợ 24/7">
+                <h3>Hỗ trợ 24/7</h3>
+                <p>• Đội ngũ hỗ trợ luôn sẵn sàng giúp bạn giải quyết mọi vấn đề.</p>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 2: C PROGRAMMING -->
-    <section class="secondsection">
-        <div class="box-main">
-            <div class="secondHalf">
-                <h1 class="text-big" id="program">
-                    C Programming
-                </h1>
-                <p class="text-small">
-                    C is a procedural programming language. It was initially developed by Dennis Ritchie as a system programming language to write operating system. 
-                    The main features of C language include low-level access to memory, simple set of keywords, and clean style, these features make C language suitable for system programming like operating system or compiler development.
-                </p>
-            </div>
+    <!-- Footer với 2 cột (Flexbox) -->
+    <footer class="footer">
+        <div class="footer-left">
+            <p>• &copy; 2026 Creative Web. All rights reserved.</p>
         </div>
-    </section>
-
-    <!-- SECTION 3: JAVA WITH THUMBNAIL -->
-    <section class="section" id="course">
-        <div class="paras">
-            <h1 class="sectionTag text-big">Java</h1>
-            <p class="sectionSubTag text-small">
-                Java has been one of the most popular programming language for many years. Java is Object Oriented. 
-                However it is not considered as pure object oriented as it provides support for primitive data types (like int, char, etc). 
-                The Java codes are first compiled into byte code (machine independent code). Then the byte code is run on Java Virtual Machine (JVM) regardless of the underlying architecture.
-            </p>
+        <div class="footer-right">
+            <p>• Theo dõi chúng tôi:</p>
+            <p>• Facebook | Twitter | LinkedIn</p>
         </div>
-
-        <div class="thumbnail">
-            <img src="https://via.placeholder.com/250x180?text=Java+Laptop" alt="laptop image">
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="background">
-        <p class="text-footer">
-            Copyright ©-All rights are reserved
-        </p>
     </footer>
 
 </body>
