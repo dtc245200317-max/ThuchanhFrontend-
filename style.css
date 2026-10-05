@@ -1,15 +1,26 @@
-/* Tùy chỉnh bổ sung cho Landing Page */
+/* Thiết lập cuộn mượt khi click liên kết Menu */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #333333;
 }
 
-/* Nền dải màu chuyển động cho Hero Section */
+/* Gradient nền cho Hero Section */
 .hero-section {
-    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
 }
 
-/* Hiệu ứng nổi hộp (Hover Effect) cho các Card dịch vụ */
+/* Đường gạch trang trí dưới tiêu đề các Section */
+.divider {
+    width: 60px;
+    height: 3px;
+    border-radius: 2px;
+}
+
+/* Hiệu ứng tương tác cho các Thẻ Dịch Vụ */
 .service-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
