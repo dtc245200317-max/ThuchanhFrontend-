@@ -20,7 +20,7 @@ body {
 
 /* Khung bọc cho từng ví dụ */
 .example-box {
-    max-width: 700px;
+    max-width: 800px;
     margin: 0 auto 30px auto;
     background: #ffffff;
     padding: 25px;
@@ -39,66 +39,82 @@ body {
 /* Định dạng khung Flexbox Container chung */
 .container {
     display: flex;
-    width: 600px;
-    height: 220px;
     gap: 10px;
-    border: 2px solid #2c3e50;
-    background-color: #fafafa;
+    border: 2px dashed #bdc3c7;
     padding: 10px;
     border-radius: 6px;
+    background-color: #fafafa;
 }
 
 .item {
-    width: 180px;
-    height: 80px;
     padding: 20px;
     text-align: center;
     font-weight: bold;
-    font-size: 18px;
     border-radius: 4px;
-    color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 /* ============================================== */
-/* VÍ DỤ 1: flex-wrap: nowrap                     */
+/* VÍ DỤ 1: flex-basis với px                     */
 /* ============================================== */
-.ex-nowrap {
-    flex-wrap: nowrap;
+.ex-px .item {
+    background-color: lightblue;
+    color: #2c3e50;
 }
-.ex-nowrap .item {
-    background-color: #2eb872; /* Màu xanh lá */
+.ex-px .item1 {
+    flex-basis: 200px;
 }
-
-/* ============================================== */
-/* VÍ DỤ 2: flex-wrap: wrap                       */
-/* ============================================== */
-.ex-wrap {
-    flex-wrap: wrap;
+.ex-px .item2 {
+    flex-basis: 100px;
 }
-.ex-wrap .item {
-    background-color: #3498db; /* Màu xanh dương */
+.ex-px .item3 {
+    flex-basis: 150px;
 }
 
 /* ============================================== */
-/* VÍ DỤ 3: flex-wrap: wrap-reverse               */
+/* VÍ DỤ 2: flex-direction: column                */
 /* ============================================== */
-.ex-wrap-reverse {
-    flex-wrap: wrap-reverse;
+.ex-column {
+    flex-direction: column;
+    height: 450px;
 }
-.ex-wrap-reverse .item {
-    background-color: #e74c3c; /* Màu đỏ */
+.ex-column .item {
+    flex-basis: 100px;
+    background-color: lightgreen;
+    color: #27ae60;
 }
 
 /* ============================================== */
-/* VÍ DỤ 4: flex-wrap: initial                    */
+/* VÍ DỤ 3: flex-basis với %                      */
 /* ============================================== */
-.ex-initial {
-    flex-wrap: wrap;    /* Thiết lập wrap trước */
-    flex-wrap: initial; /* Đặt lại về mặc định (nowrap) */
+.ex-percent .item {
+    flex-basis: 50%;
+    background-color: lightcoral;
+    color: #ffffff;
 }
-.ex-initial .item {
-    background-color: #f39c12; /* Màu cam */
+
+/* ============================================== */
+/* VÍ DỤ 4: Kết hợp flex-basis và flex-grow      */
+/* ============================================== */
+.ex-grow {
+    width: 600px;
+    margin: 0 auto;
+}
+.ex-grow .item {
+    background-color: #3498db;
+    color: #ffffff;
+}
+.ex-grow .item1 {
+    flex-basis: 100px;
+    flex-grow: 1;
+}
+.ex-grow .item2 {
+    flex-basis: 100px;
+    flex-grow: 2;
+}
+.ex-grow .item3 {
+    flex-basis: 100px;
+    flex-grow: 1;
 }
