@@ -20,7 +20,7 @@ body {
 
 /* Khung bọc cho từng ví dụ */
 .example-box {
-    max-width: 800px;
+    max-width: 850px;
     margin: 0 auto 30px auto;
     background: #ffffff;
     padding: 25px;
@@ -29,7 +29,7 @@ body {
 }
 
 .example-box h2 {
-    font-size: 18px;
+    font-size: 17px;
     margin-bottom: 15px;
     color: #2c3e50;
     border-left: 4px solid #3498db;
@@ -39,6 +39,7 @@ body {
 /* Định dạng khung Flexbox Container chung */
 .container {
     display: flex;
+    width: 100%;
     gap: 10px;
     border: 2px dashed #bdc3c7;
     padding: 10px;
@@ -47,74 +48,42 @@ body {
 }
 
 .item {
-    padding: 20px;
+    background-color: lightblue;
+    padding: 20px 10px;
     text-align: center;
     font-weight: bold;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/* ============================================== */
-/* VÍ DỤ 1: flex-basis với px                     */
-/* ============================================== */
-.ex-px .item {
-    background-color: lightblue;
     color: #2c3e50;
 }
-.ex-px .item1 {
-    flex-basis: 200px;
-}
-.ex-px .item2 {
-    flex-basis: 100px;
-}
-.ex-px .item3 {
-    flex-basis: 150px;
-}
 
 /* ============================================== */
-/* VÍ DỤ 2: flex-direction: column                */
+/* VÍ DỤ 1: flex-grow: 1 trên Item 2              */
 /* ============================================== */
-.ex-column {
-    flex-direction: column;
-    height: 450px;
-}
-.ex-column .item {
-    flex-basis: 100px;
-    background-color: lightgreen;
-    color: #27ae60;
-}
-
-/* ============================================== */
-/* VÍ DỤ 3: flex-basis với %                      */
-/* ============================================== */
-.ex-percent .item {
-    flex-basis: 50%;
-    background-color: lightcoral;
+.ex1 .item2 {
+    flex-grow: 1;
+    background-color: #e74c3c; /* Màu đỏ nổi bật */
     color: #ffffff;
 }
 
 /* ============================================== */
-/* VÍ DỤ 4: Kết hợp flex-basis và flex-grow      */
+/* VÍ DỤ 2: Tỷ lệ flex-grow giữa các ô           */
 /* ============================================== */
-.ex-grow {
-    width: 600px;
-    margin: 0 auto;
-}
-.ex-grow .item {
+.ex2 .item {
+    flex-grow: 1;
     background-color: #3498db;
     color: #ffffff;
 }
-.ex-grow .item1 {
-    flex-basis: 100px;
-    flex-grow: 1;
+
+.ex2 .item2 {
+    flex-grow: 3; /* Item 2 phát triển gấp 3 lần khoảng tăng của ô khác */
+    background-color: #e67e22; /* Màu cam nổi bật */
 }
-.ex-grow .item2 {
-    flex-basis: 100px;
-    flex-grow: 2;
-}
-.ex-grow .item3 {
-    flex-basis: 100px;
-    flex-grow: 1;
+
+/* ============================================== */
+/* VÍ DỤ 3: flex-grow: initial (mặc định = 0)     */
+/* ============================================== */
+.ex3 .item2 {
+    flex-grow: initial; /* Tương đương flex-grow: 0 */
+    background-color: #95a5a6;
+    color: #ffffff;
 }
