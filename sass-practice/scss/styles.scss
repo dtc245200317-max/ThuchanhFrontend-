@@ -1,0 +1,82 @@
+@import 'variables';
+
+// Reset mặc định & Cấu trúc chính
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-stack;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+// Header sử dụng Nesting
+.header {
+    background-color: $dark-bg;
+    color: $light-text;
+    padding: 40px 20px;
+    text-align: center;
+
+    h1 {
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+
+    p {
+        color: lighten($dark-bg, 40%);
+        font-size: 1.1rem;
+    }
+}
+
+// Container & Cards
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    .card-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+
+        .card {
+            background-color: #ffffff;
+            border-radius: $card-radius;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h3 {
+                color: $primary-color;
+                margin-bottom: 10px;
+            }
+
+            p {
+                color: #666;
+                line-height: 1.5;
+            }
+
+            .btn {
+                display: inline-block;
+                margin-top: 15px;
+                padding: 8px 16px;
+                background-color: $secondary-color;
+                color: $light-text;
+                text-decoration: none;
+                border-radius: 5px;
+                font-weight: bold;
+
+                &:hover {
+                    background-color: darken($secondary-color, 10%);
+                }
+            }
+        }
+    }
+}
