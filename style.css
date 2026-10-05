@@ -20,7 +20,7 @@ body {
 
 /* Khung bọc cho từng ví dụ */
 .example-box {
-    max-width: 850px;
+    max-width: 700px;
     margin: 0 auto 30px auto;
     background: #ffffff;
     padding: 25px;
@@ -29,61 +29,58 @@ body {
 }
 
 .example-box h2 {
-    font-size: 17px;
+    font-size: 18px;
     margin-bottom: 15px;
     color: #2c3e50;
     border-left: 4px solid #3498db;
     padding-left: 10px;
 }
 
-/* Định dạng khung Flexbox Container chung */
+/* Khung Container dùng chung */
 .container {
     display: flex;
-    width: 100%;
-    gap: 10px;
-    border: 2px dashed #bdc3c7;
+    background-color: #f1f1f1;
     padding: 10px;
     border-radius: 6px;
-    background-color: #fafafa;
+    border: 1px solid #ddd;
 }
 
-.item {
-    background-color: lightblue;
-    padding: 20px 10px;
+/* ============================================== */
+/* VÍ DỤ 1: flex-flow: row nowrap                 */
+/* ============================================== */
+.container-1 {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.container-1 > div {
+    background-color: #007bff; /* Màu xanh dương */
+    color: white;
+    width: 100px;
+    margin: 10px;
     text-align: center;
+    line-height: 50px;
     font-weight: bold;
+    font-size: 18px;
     border-radius: 4px;
-    color: #2c3e50;
 }
 
 /* ============================================== */
-/* VÍ DỤ 1: flex-grow: 1 trên Item 2              */
+/* VÍ DỤ 2: flex-flow: row-reverse nowrap         */
 /* ============================================== */
-.ex1 .item2 {
-    flex-grow: 1;
-    background-color: #e74c3c; /* Màu đỏ nổi bật */
-    color: #ffffff;
+.container-2 {
+    display: flex;
+    flex-flow: row-reverse nowrap;
 }
 
-/* ============================================== */
-/* VÍ DỤ 2: Tỷ lệ flex-grow giữa các ô           */
-/* ============================================== */
-.ex2 .item {
-    flex-grow: 1;
-    background-color: #3498db;
-    color: #ffffff;
-}
-
-.ex2 .item2 {
-    flex-grow: 3; /* Item 2 phát triển gấp 3 lần khoảng tăng của ô khác */
-    background-color: #e67e22; /* Màu cam nổi bật */
-}
-
-/* ============================================== */
-/* VÍ DỤ 3: flex-grow: initial (mặc định = 0)     */
-/* ============================================== */
-.ex3 .item2 {
-    flex-grow: initial; /* Tương đương flex-grow: 0 */
-    background-color: #95a5a6;
-    color: #ffffff;
+.container-2 > div {
+    background-color: #28a745; /* Màu xanh lá */
+    color: white;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+    line-height: 50px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 4px;
 }
