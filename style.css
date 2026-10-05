@@ -1,31 +1,23 @@
-/* Thiết lập cuộn mượt khi click liên kết Menu */
-html {
-    scroll-behavior: smooth;
-}
-
+/* Custom CSS cho bài tập Grid System */
 body {
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    color: #333333;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    background-color: #f4f6f9;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* Gradient nền cho Hero Section */
-.hero-section {
-    background: linear-gradient(135deg, #0d6efd 0%, #084298 100%);
+/* Header Gradient Style */
+.header-banner {
+    background: linear-gradient(135deg, #0d6efd 0%, #0b5ed7 100%);
 }
 
-/* Đường gạch trang trí dưới tiêu đề các Section */
-.divider {
-    width: 60px;
-    height: 3px;
-    border-radius: 2px;
+/* Card hover effect */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hiệu ứng tương tác cho các Thẻ Dịch Vụ */
-.service-card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1) !important;
 }
