@@ -7,80 +7,88 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
     color: #333333;
-    padding: 30px 20px;
+    background-color: #eef2f5;
 }
 
-.page-title {
+/* Khung bọc toàn bộ trang web (Sticky Footer & Full Height) */
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Đảm bảo trang web luôn tràn toàn bộ chiều cao màn hình */
+}
+
+/* Header & Footer */
+.header, .footer {
+    background-color: #333333;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 30px;
+    padding: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.footer {
+    font-size: 14px;
+}
+
+/* Navigation Menu */
+.nav {
+    background-color: #444444;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Khung Flexbox chứa Content và Sidebar */
+.main-container {
+    display: flex;
+    flex: 1; /* Tự động co giãn để lấp đầy khoảng trống còn lại theo chiều dọc */
+}
+
+/* Main Content: chiếm 3 phần (75% chiều rộng) */
+.content {
+    flex: 3;
+    background-color: #ffffff;
+    padding: 25px;
+    line-height: 1.6;
+}
+
+.content h2 {
+    margin-bottom: 15px;
     color: #1b365d;
 }
 
-/* Khung bọc cho từng ví dụ */
-.example-box {
-    max-width: 700px;
-    margin: 0 auto 30px auto;
-    background: #ffffff;
+/* Sidebar: chiếm 1 phần (25% chiều rộng) */
+.sidebar {
+    flex: 1;
+    background-color: #f4f4f4;
     padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    line-height: 1.6;
+    border-left: 1px solid #e0e0e0;
 }
 
-.example-box h2 {
-    font-size: 18px;
+.sidebar h3 {
     margin-bottom: 15px;
     color: #2c3e50;
-    border-left: 4px solid #3498db;
-    padding-left: 10px;
-}
-
-/* Khung Container dùng chung */
-.container {
-    display: flex;
-    background-color: #f1f1f1;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ddd;
 }
 
 /* ============================================== */
-/* VÍ DỤ 1: flex-flow: row nowrap                 */
+/* RESPONSIVE DESIGN (Media Query cho Mobile)     */
 /* ============================================== */
-.container-1 {
-    display: flex;
-    flex-flow: row nowrap;
-}
+@media (max-width: 768px) {
+    /* Chuyển Main Container từ xếp hàng ngang sang xếp hàng dọc */
+    .main-container {
+        flex-direction: column;
+    }
 
-.container-1 > div {
-    background-color: #007bff; /* Màu xanh dương */
-    color: white;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 4px;
-}
-
-/* ============================================== */
-/* VÍ DỤ 2: flex-flow: row-reverse nowrap         */
-/* ============================================== */
-.container-2 {
-    display: flex;
-    flex-flow: row-reverse nowrap;
-}
-
-.container-2 > div {
-    background-color: #28a745; /* Màu xanh lá */
-    color: white;
-    width: 100px;
-    margin: 10px;
-    text-align: center;
-    line-height: 50px;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 4px;
+    /* Đổi viền đường phân cách chiều dọc sang chiều ngang trên mobile */
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid #e0e0e0;
+    }
 }

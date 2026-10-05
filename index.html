@@ -3,33 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành CSS flex-flow Property</title>
+    <title>Flexbox Layout - Bố Cục Trang Web Responsive</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 class="page-title">Thực Hành Thuộc Tính flex-flow</h1>
+    <div class="container">
+        <!-- 1. Đầu trang -->
+        <header class="header">
+            <h1>Header - Tiêu Đề Trang Web</h1>
+        </header>
 
-    <!-- Ví dụ 1: flex-flow: row nowrap -->
-    <section class="example-box">
-        <h2>Ví dụ 1: flex-flow: row nowrap (Mặc định - Trái qua Phải, không xuống dòng)</h2>
-        <div class="container container-1">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
-        </div>
-    </section>
+        <!-- 2. Thanh điều hướng -->
+        <nav class="nav">
+            Navigation - Thanh Điều Hướng
+        </nav>
 
-    <!-- Ví dụ 2: flex-flow: row-reverse nowrap -->
-    <section class="example-box">
-        <h2>Ví dụ 2: flex-flow: row-reverse nowrap (Đảo hướng - Phải qua Trái, không xuống dòng)</h2>
-        <div class="container container-2">
-            <div>1</div>
-            <div>2</div>
-            <div>3</div>
+        <!-- 3. Khung chứa nội dung chính và cột phụ -->
+        <div class="main-container">
+            <main class="content">
+                <h2>Main Content - Khu Vực Nội Dung Chính</h2>
+                <p>Đây là khu vực hiển thị bài viết, sản phẩm hoặc thông tin chính của trang web. Bố cục sử dụng <code>flex: 3</code> để tự động chiếm 75% tổng chiều rộng trên màn hình máy tính.</p>
+            </main>
+            
+            <aside class="sidebar">
+                <h3>Sidebar - Cột Phụ</h3>
+                <p>Khu vực chứa tin tức nổi bật, danh mục, liên kết phụ hoặc quảng cáo. Sử dụng <code>flex: 1</code> để chiếm 25% chiều rộng còn lại.</p>
+            </aside>
         </div>
-    </section>
+
+        <!-- 4. Chân trang -->
+        <footer class="footer">
+            Footer - Thông Tin Bản Quyền & Bản Đồ Trang
+        </footer>
+    </div>
 
 </body>
 </html>
