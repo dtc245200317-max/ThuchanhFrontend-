@@ -3,24 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thực hành Grid Row</title>
+    <title>Thực hành CSS grid-gap Property</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1 style="text-align: center; margin-bottom: 20px; color: #1b365d;">
-        Thực Hành Thuộc Tính grid-row
-    </h1>
+    <h1 class="page-title">Thực Hành Thuộc Tính grid-gap & gap</h1>
 
-    <div class="grid-container">
-        <div class="item item1">Ô 1</div>
-        <div class="item">Ô 2</div>
-        <div class="item">Ô 3</div>
-        <div class="item">Ô 4</div>
-        <div class="item">Ô 5</div>
-        <div class="item">Ô 6</div>
-    </div>
+    <!-- Ví dụ 1: Thiết lập khoảng cách hàng và cột bằng nhau -->
+    <section class="example-box">
+        <h2>Ví dụ 1: Khoảng cách hàng & cột bằng nhau (grid-gap: 20px)</h2>
+        <div class="grid-container ex1">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+        </div>
+    </section>
+
+    <!-- Ví dụ 2: Thiết lập khoảng cách hàng và cột khác nhau -->
+    <section class="example-box">
+        <h2>Ví dụ 2: Khoảng cách hàng & cột khác nhau (grid-gap: 30px 10px)</h2>
+        <div class="grid-container ex2">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+            <div>Ô 5</div>
+            <div>Ô 6</div>
+        </div>
+    </section>
+
+    <!-- Ví dụ 3: Cú pháp chuẩn hiện đại (gap) -->
+    <section class="example-box">
+        <h2>Ví dụ 3: Cú pháp CSS hiện đại (gap: 30px 10px)</h2>
+        <div class="grid-container ex3">
+            <div>Ô 1</div>
+            <div>Ô 2</div>
+            <div>Ô 3</div>
+            <div>Ô 4</div>
+            <div>Ô 5</div>
+            <div>Ô 6</div>
+        </div>
+    </section>
 
 </body>
 </html>

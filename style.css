@@ -1,3 +1,4 @@
+/* Reset CSS cơ bản */
 * {
     margin: 0;
     padding: 0;
@@ -7,36 +8,85 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f6f9;
-    padding: 30px;
+    color: #333333;
+    padding: 30px 20px;
 }
 
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1b365d;
+}
+
+/* Khung bọc cho từng ví dụ */
+.example-box {
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.example-box h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    border-left: 4px solid #3498db;
+    padding-left: 10px;
+}
+
+/* Định dạng khung Grid chung */
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
-    grid-template-rows: repeat(3, 100px);   /* 3 hàng, mỗi hàng cao 100px */
-    gap: 10px;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #ffffff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 2px dashed #bdc3c7;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fafafa;
 }
 
-.item {
-    background-color: lightblue;
+.grid-container div {
     padding: 20px;
     text-align: center;
     font-weight: bold;
     border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Ô 1: Đổi màu cam để dễ quan sát vị trí thay đổi */
-.item1 {
-    grid-row: 1 / 3; /* Thay đổi giá trị này ở các bước kiểm tra */
+/* ============================================== */
+/* VÍ DỤ 1: grid-gap: 20px                        */
+/* ============================================== */
+.ex1 {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px; /* Thiết lập khoảng cách 20px cho cả hàng và cột */
+}
+
+.ex1 div {
+    background-color: lightblue;
+    color: #2c3e50;
+}
+
+/* ============================================== */
+/* VÍ DỤ 2: grid-gap: 30px 10px                   */
+/* ============================================== */
+.ex2 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px 10px; /* 30px khoảng cách hàng, 10px khoảng cách cột */
+}
+
+.ex2 div {
+    background-color: lightgreen;
+    color: #27ae60;
+}
+
+/* ============================================== */
+/* VÍ DỤ 3: Cú pháp hiện đại (gap: 30px 10px)     */
+/* ============================================== */
+.ex3 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px 10px; /* Cú pháp ngắn gọn chuẩn W3C hiện đại */
+}
+
+.ex3 div {
     background-color: #f39c12;
     color: #ffffff;
 }
