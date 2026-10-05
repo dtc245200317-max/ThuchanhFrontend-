@@ -3,36 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bố cục trang web với CSS Grid</title>
+    <title>Bài Tập - Bố Cục Responsive CSS Grid</title>
     <!-- Liên kết tệp CSS bên ngoài -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Khung lưới chính chứa toàn bộ bố cục -->
-    <div class="container">
+    <!-- Khung bọc Grid chính -->
+    <div class="grid-layout">
+        
+        <!-- 1. Header -->
         <header class="header">
-            <h1>Header - Tiêu đề trang web</h1>
+            <h1>Header - Tiêu Đề Trang Web</h1>
         </header>
 
-        <nav class="sidebar">
-            <h3>Sidebar</h3>
+        <!-- 2. Navigation -->
+        <nav class="nav">
             <ul>
                 <li><a href="#">Trang chủ</a></li>
-                <li><a href="#">Danh mục</a></li>
+                <li><a href="#">Sản phẩm</a></li>
+                <li><a href="#">Dịch vụ</a></li>
                 <li><a href="#">Tin tức</a></li>
                 <li><a href="#">Liên hệ</a></li>
             </ul>
         </nav>
 
-        <main class="content">
-            <h2>Nội dung chính</h2>
-            <p>Đây là khu vực hiển thị nội dung chính của trang web. Bố cục này được xây dựng hoàn toàn bằng mô hình CSS Grid, cho phép phân chia vùng hiển thị trực quan và hỗ trợ Responsive linh hoạt trên mọi kích thước màn hình.</p>
+        <!-- 3. Sidebar -->
+        <aside class="sidebar">
+            <h3>Sidebar</h3>
+            <p>Khu vực tin tức phụ, danh mục, liên kết nhanh hoặc quảng cáo.</p>
+        </aside>
+
+        <!-- 4. Main Content -->
+        <main class="main">
+            <h2>Nội Dung Chính (Main Content)</h2>
+            <p>Đây là khu vực hiển thị nội dung chính của website. Mô hình CSS Grid cho phép phân chia vị trí chính xác trên màn hình Desktop và dễ dàng thu gọn thành dạng cột đơn khi hiển thị trên màn hình thiết bị di động.</p>
         </main>
 
+        <!-- 5. Footer -->
         <footer class="footer">
-            <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+            <p>&copy; 2026 CodeGym Practice. All rights reserved.</p>
         </footer>
+
     </div>
 
 </body>
