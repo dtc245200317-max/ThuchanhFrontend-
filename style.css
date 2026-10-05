@@ -1,23 +1,20 @@
-/* Custom Styles cho Navbar */
+/* Tùy chỉnh bổ sung cho Landing Page */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f8f9fa;
 }
 
-/* Đổi màu highlight cho thương hiệu */
-.navbar-brand {
-    font-size: 1.4rem;
-    letter-spacing: 0.5px;
+/* Nền dải màu chuyển động cho Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
 }
 
-/* Hiệu ứng hover cho các item điều hướng */
-.navbar-dark .navbar-nav .nav-link:hover {
-    color: #0d6efd !important;
-    transition: color 0.2s ease-in-out;
+/* Hiệu ứng nổi hộp (Hover Effect) cho các Card dịch vụ */
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Tùy chỉnh bo góc cho Dropdown menu */
-.dropdown-menu {
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12) !important;
 }
