@@ -3,35 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Navbar</title>
-    <!-- Liên kết tệp CSS bên ngoài -->
+    <title>Landing Page Responsive</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Liên kết tệp JavaScript (thêm thuộc tính defer để tải script sau khi HTML nạp xong) -->
-    <script defer src="script.js"></script>
 </head>
 <body>
+    <header class="header">
+        <div class="logo">MyBrand</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Dịch vụ</a></li>
+                <li><a href="#">Đánh giá</a></li>
+                <li><a href="#">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Thanh điều hướng chính -->
-    <nav class="navbar">
-        <div class="logo">MyWebsite</div>
-        
-        <!-- Danh sách menu liên kết -->
-        <ul class="nav-links">
-            <li><a href="#">Trang chủ</a></li>
-            <li><a href="#">Giới thiệu</a></li>
-            <li><a href="#">Dịch vụ</a></li>
-            <li><a href="#">Liên hệ</a></li>
-        </ul>
+    <section class="hero">
+        <h1>Chào mừng đến với MyBrand</h1>
+        <p>Giải pháp số 1 cho doanh nghiệp của bạn</p>
+        <a href="#services" class="btn">Tìm hiểu thêm</a>
+    </section>
 
-        <!-- Biểu tượng hamburger menu (Chỉ hiển thị trên thiết bị di động) -->
-        <div class="menu-icon">&#9776;</div>
-    </nav>
+    <section id="services" class="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <div class="service-container">
+            <div class="service">Thiết kế web</div>
+            <div class="service">Phát triển phần mềm</div>
+            <div class="service">Marketing số</div>
+        </div>
+    </section>
 
-    <!-- Khung nội dung giả định để kiểm tra giao diện -->
-    <main style="padding: 40px; text-align: center;">
-        <h2>Chào mừng bạn đến với trang web của tôi</h2>
-        <p>Hãy thử co giãn kích thước màn hình trình duyệt hoặc kiểm tra trên thiết bị di động để trải nghiệm tính năng Responsive Navbar.</p>
-    </main>
+    <section class="testimonials">
+        <h2>Khách hàng nói gì?</h2>
+        <div class="testimonial">"Dịch vụ tuyệt vời!" - Khách hàng A</div>
+        <div class="testimonial">"Tôi rất hài lòng với MyBrand." - Khách hàng B</div>
+    </section>
 
+    <footer class="footer">
+        <p>&copy; 2024 MyBrand. All rights reserved.</p>
+    </footer>
 </body>
 </html>
